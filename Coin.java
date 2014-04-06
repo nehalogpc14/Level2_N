@@ -14,9 +14,9 @@ public class Coin extends Actor
      */
     public void act() 
      { 
-        int direction = 2;
+         int direction = 2;
         move(direction);
-        if(getX() <1  || getX()>489)
+        if(getX() <1  || getX()>490)
         {
             turn(180);
         }

@@ -17,17 +17,17 @@ public class background extends World
     {
         map = new String[] { "                         ",
                              "     g                   ",
-                             "    ff                   ",
+                             "    ddd                  ",
                              "                         ",
                              "             g           ",
-                             "             c           ",
+                             "  b         dd           ",
                              "                         ",
                              "   g                     ",
-                             "   b                     ",
+                             "  ddd           c        ",
                              "                         ",
-                             "           ggggg         ",
-                             "           c             ",
-                             "                         ",
+                             "           gggg          ",
+                             "          ddddd          ",
+                             "    b                    ",
                              "  a                      ",
                              "     gggg                ",
                              "fffffffffffffffffffffffff" };
@@ -45,7 +45,7 @@ public class background extends World
         setFields();
         for (int i=0; i<map.length; i++) for (int j=0; j<map[i].length(); j++)
             {
-                int kind = "afbcg".indexOf(""+map[i].charAt(j));
+                int kind = "afbcgd".indexOf(""+map[i].charAt(j));
                 if (kind < 0) continue;
                 Actor actor = null;
                 if (kind == 0) actor = new Avatar();
@@ -53,6 +53,7 @@ public class background extends World
                 if (kind == 2) actor = new brownblock();
                 if (kind == 3) actor = new brownblockL();
                 if (kind == 4) actor = new Coin();
+                if (kind == 5) actor = new Brickblock();
                 addObject(actor, 16+j*32, 16+i*32);
             }
         //Avatar avatar = new Avatar();

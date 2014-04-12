@@ -15,21 +15,21 @@ public class background extends World
     //      c = character    d = door            s = score
     public void setFields()
     {
-        map = new String[] { "                         ",
-                             "     g                   ",
-                             "    ddd                  ",
-                             "                         ",
-                             "             g           ",
-                             "  b         dd           ",
-                             "                         ",
-                             "   g                     ",
-                             "  ddd           c        ",
-                             "                         ",
-                             "           gggg          ",
-                             "          ddddd          ",
-                             "    b                    ",
-                             "  a                      ",
-                             "     gggg                ",
+        map = new String[] { "                      ",
+                             "                      ",
+                             "    ddd               ",
+                             "                      ",
+                             "                      ",
+                             "  dd        b      dd ",
+                             "                      ",
+                             "                      ",
+                             "  dd     c         dd ",
+                             "                      ",
+                             "                      ",
+                             " ddd    b          dd ",
+                             "                      ",
+                             "  a                   ",
+                             "                      ",
                              "fffffffffffffffffffffffff" };
     }
 
@@ -40,7 +40,7 @@ public class background extends World
     public background()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 500, 1); 
+        super(800, 500, 1); 
         //setBackground(new GreenfootImage("StartScreen.png")); // Splash Screen
         setFields();
         for (int i=0; i<map.length; i++) for (int j=0; j<map[i].length(); j++)

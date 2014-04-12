@@ -16,7 +16,7 @@ public class brownblock extends Floor
     { 
          int direction = 2;
         move(direction);
-        if(getX() <1  || getX()>590 || getOneObjectAtOffset(getImage().getWidth()/2, 0, Brickblock.class) != null)
+        if(getX() <1  || getX()>590 || getOneObjectAtOffset(getImage().getWidth()/2, 0, Brickblock.class) != null || getOneObjectAtOffset(-getImage().getWidth()/2, 0, Brickblock.class) != null)
         {
             turn(180);
         }

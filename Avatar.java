@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Avatar extends Actor
 {
     private int vSpeed = 0;
-    private boolean jumping;
+    private boolean jumping = false;
     private int jumpheight = 15;
     private int fallspeed = 1;
     private int Coinscollected;
@@ -54,7 +54,7 @@ public class Avatar extends Actor
     {
         vSpeed = vSpeed - jumpheight;
         jumping = true;
-        fall();
+        fall();   
     }
     public void moveToGround(Actor ground)
     {

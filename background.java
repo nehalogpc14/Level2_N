@@ -10,26 +10,26 @@ public class background extends World
 {
     String[] map;
      /** ********************      MAP LEGEND     *********************** */
-    //      b = block        m = monster         f = floating platform
-    //      p = platform     k = key             w = wall
-    //      c = character    d = door            s = score
+    //      a = avatar       f = floor           b = brownblock
+    //      c = brownblockL  g = Goldcoin        h = Bluecoin
+    //      r = Redcoin      d = Brickblock      
     public void setFields()
     {
-        map = new String[] { "                      ",
-                             "                      ",
-                             "    ddd               ",
-                             "                      ",
-                             "                      ",
-                             "  dd        b      dd ",
-                             "                      ",
-                             "                      ",
-                             "  dd     c         dd ",
-                             "                      ",
-                             "                      ",
-                             " ddd    b          dd ",
-                             "                      ",
-                             "  a                   ",
-                             "                      ",
+        map = new String[] { "  r                     ",
+                             "  ddd           b       ",
+                             "                        ",
+                             "        grrhrrg         ",
+                             "       ddddddddd        ",
+                             "  gg                gg  ",
+                             "  dd                dd  ",
+                             "        g      r        ",
+                             "       dd  b  dd        ",
+                             "                        ",
+                             "                        ",
+                             "    gr             rh   ",
+                             "   ddd            ddd   ",
+                             "  a                     ",
+                             "        g r   r  g      ",
                              "fffffffffffffffffffffffff" };
     }
 
@@ -45,15 +45,17 @@ public class background extends World
         setFields();
         for (int i=0; i<map.length; i++) for (int j=0; j<map[i].length(); j++)
             {
-                int kind = "afbcgd".indexOf(""+map[i].charAt(j));
+                int kind = "afbcghrd".indexOf(""+map[i].charAt(j));
                 if (kind < 0) continue;
                 Actor actor = null;
                 if (kind == 0) actor = new Avatar();
                 if (kind == 1) actor = new Floor();
                 if (kind == 2) actor = new brownblock();
                 if (kind == 3) actor = new brownblockL();
-                if (kind == 4) actor = new Coin();
-                if (kind == 5) actor = new Brickblock();
+                if (kind == 4) actor = new Goldcoin();
+                if (kind == 5) actor = new Bluecoin();
+                if (kind == 6) actor = new Redcoin();
+                if (kind == 7) actor = new Brickblock();
                 addObject(actor, 16+j*32, 16+i*32);
             }
         //Avatar avatar = new Avatar();

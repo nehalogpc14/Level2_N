@@ -10,7 +10,7 @@ public class Avatar extends Actor
 {
     private int vSpeed = 0;
     private boolean jumping = false;
-    private int jumpheight = 15;
+    private int jumpheight = 16;
     private int fallspeed = 1;
     private int Coinscollected;
     private GreenfootImage run1r = new GreenfootImage("run1r.png");
@@ -82,7 +82,7 @@ public class Avatar extends Actor
     public void fall()
     {
         setLocation(getX(), getY() + vSpeed);
-        if(vSpeed <=9)
+        if(vSpeed <=7)
         {
             vSpeed = vSpeed + fallspeed;
         }
@@ -90,7 +90,7 @@ public class Avatar extends Actor
     }
     public void CheckFall()
     {
-         if(onGround())
+         if(onGround() || FloorAbove())
         {
             vSpeed = 0;
         }

@@ -262,7 +262,7 @@ public class Avatar extends Actor
         if(collision3 != null)//if you have not run into it 
         {
             counter.add(1);
-            Greenfoot.playSound("fanfare.wav");
+            Greenfoot.playSound("Ghost hit.wav");
         }
     
     }  

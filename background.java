@@ -24,7 +24,7 @@ public class background extends World
                              "  gg                gg  ",
                              "  dd                dd  ",
                              "        g      r        ",
-                             "       dd  b  dd        ",
+                             "      ddd  b  ddd       ",
                              "                        ",
                              "                        ",
                              "    gr             rh   ",
@@ -46,10 +46,11 @@ public class background extends World
         setFields();
         for (int i=0; i<map.length; i++) for (int j=0; j<map[i].length(); j++)
             {
+                Counter counter = new Counter();
                 int kind = "afbcghrdwz".indexOf(""+map[i].charAt(j));
                 if (kind < 0) continue;
                 Actor actor = null;
-                if (kind == 0) actor = new Avatar();
+                if (kind == 0) actor = new Avatar(counter);
                 if (kind == 1) actor = new Floor();
                 if (kind == 2) actor = new brownblock();
                 if (kind == 3) actor = new brownblockL();
@@ -58,7 +59,7 @@ public class background extends World
                 if (kind == 6) actor = new Redcoin();
                 if (kind == 7) actor = new Brickblock();
                 if (kind == 8) actor = new Ghost();
-                if (kind == 9) actor = new Counter();
+                if (kind == 9) actor = counter;
                 addObject(actor, 16+j*32, 16+i*32);
             }
         //Avatar avatar = new Avatar();

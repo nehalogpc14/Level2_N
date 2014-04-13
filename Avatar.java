@@ -222,53 +222,50 @@ public class Avatar extends Actor
         }
     }
     //Shefali 
-    //public Avatar(Counter pointCounter)
-   // {
-   //     counter = pointCounter;
-   // }
+    public Avatar(Counter pointCounter)
+    {
+        counter = pointCounter;
+    }
     
     public void Collision()
     {
-    Actor collision1 = getOneIntersectingObject(Spikyball2.class); 
-    Actor collision2 = getOneIntersectingObject(Spikyball3.class);
-    Actor collision3 = getOneIntersectingObject(Ghost.class);
+        Actor collision1 = getOneIntersectingObject(Spikyball2.class); 
+        Actor collision2 = getOneIntersectingObject(Spikyball3.class);
+        Actor collision3 = getOneIntersectingObject(Ghost.class);
     
-    if(collision1 != null)//if you have not run into it 
-    {
-       World myWorld = getWorld();
-       background space = (background)myWorld;
-       HealthBar healthbar = space.getHealthBar();
-       if(touchingSpikyBall2 == false)
-       if(touchingSpikyBall3 == false)
-       {
-           healthbar.loseHealth();
-           touchingSpikyBall2 = true;
-           touchingSpikyBall3 = true;
-           if(healthbar.health <=0)
-           {
-              myWorld.removeObject(this);
+        if(collision1 != null)//if you have not run into it 
+        {
+            World myWorld = getWorld();
+            background space = (background)myWorld;
+            HealthBar healthbar = space.getHealthBar();
+            if(touchingSpikyBall3 == false)
+            {
+                healthbar.loseHealth();
+                touchingSpikyBall2 = true;
+                touchingSpikyBall3 = true;
+                if(healthbar.health <=0)
+                {
+                    myWorld.removeObject(this);
+                }
             }
+            counter.add(1);
+            Greenfoot.playSound("hooray.wav");
         }
-       counter.add(1);
-       Greenfoot.playSound("hooray.wav");
-    }else {
-        touchingSpikyBall2 = false;
-        touchingSpikyBall3 = false;
     
-    if(collision2 != null)//if you have not run into it 
-    {
-       counter.add(1);
-       Greenfoot.playSound("explosion.wav");
-    }
-}
+        if(collision2 != null)//if you have not run into it 
+        {
+            counter.add(1);
+            Greenfoot.playSound("explosion.wav");
+        }
+
     
-    if(collision3 != null)//if you have not run into it 
-    {
-       counter.add(1);
-       Greenfoot.playSound("fanfare.wav");
-    }
+        if(collision3 != null)//if you have not run into it 
+        {
+            counter.add(1);
+            Greenfoot.playSound("fanfare.wav");
+        }
     
-}  
+    }  
 
 }
 

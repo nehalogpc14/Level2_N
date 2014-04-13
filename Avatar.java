@@ -191,6 +191,7 @@ public class Avatar extends Actor
         if(Coinscollected()) 
         {
             getCoin();
+            Greenfoot.playSound("Coin.wav");
         }
     }
     public void getCoin()
@@ -199,7 +200,7 @@ public class Avatar extends Actor
         if(Coin != null) {
             // eat the coin...
             getWorld().removeObject(Coin);
-            Coinscollected = Coinscollected + 1; 
+            Coinscollected = Coinscollected + 1;   
         }
     }
 

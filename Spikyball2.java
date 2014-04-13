@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Spikyball2 extends Actor
 {
     private int vSpeed = 0;
-    private int acceleration = 1;
+    private int acceleration = -1;
     
     /**
      * Act - do whatever the Spikyball2 wants to do. This method is called whenever

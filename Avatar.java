@@ -237,16 +237,16 @@ public class Avatar extends Actor
         {
             World myWorld = getWorld();
             background space = (background)myWorld;
-            HealthBar healthbar = space.getHealthBar();
+           // HealthBar healthbar = space.getHealthBar();
             if(touchingSpikyBall3 == false)
             {
-                healthbar.loseHealth();
+               // healthbar.loseHealth();
                 touchingSpikyBall2 = true;
                 touchingSpikyBall3 = true;
-                if(healthbar.health <=0)
-                {
-                    myWorld.removeObject(this);
-                }
+                //if(healthbar.health <=0)
+                //{
+                   // myWorld.removeObject(this);
+               // }
             }
             counter.add(1);
             Greenfoot.playSound("hooray.wav");
@@ -262,7 +262,7 @@ public class Avatar extends Actor
         if(collision3 != null)//if you have not run into it 
         {
             counter.add(1);
-            Greenfoot.playSound("Ghost hit.wav");
+            Greenfoot.playSound("Ghosthit.wav");
         }
     
     }  

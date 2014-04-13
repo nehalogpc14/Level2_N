@@ -12,13 +12,13 @@ public class background extends World
      /** ********************      MAP LEGEND     *********************** */
     //      a = avatar       f = floor           b = brownblock
     //      c = brownblockL  g = Goldcoin        h = Bluecoin
-    //      r = Redcoin      d = Brickblock      
+    //      r = Redcoin      d = Brickblock      w = Ghos
     public void setFields()
     {
         map = new String[] { "  r                     ",
                              "  ddd           b       ",
                              "                        ",
-                             "        grrhrrg         ",
+                             "        grrwrrg         ",
                              "       ddddddddd        ",
                              "  gg                gg  ",
                              "  dd                dd  ",
@@ -45,7 +45,7 @@ public class background extends World
         setFields();
         for (int i=0; i<map.length; i++) for (int j=0; j<map[i].length(); j++)
             {
-                int kind = "afbcghrd".indexOf(""+map[i].charAt(j));
+                int kind = "afbcghrdw".indexOf(""+map[i].charAt(j));
                 if (kind < 0) continue;
                 Actor actor = null;
                 if (kind == 0) actor = new Avatar();
@@ -56,6 +56,7 @@ public class background extends World
                 if (kind == 5) actor = new Bluecoin();
                 if (kind == 6) actor = new Redcoin();
                 if (kind == 7) actor = new Brickblock();
+                if (kind == 8) actor = new Ghost();
                 addObject(actor, 16+j*32, 16+i*32);
             }
         //Avatar avatar = new Avatar();

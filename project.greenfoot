@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Sat Apr 12 18:00:02 PDT 2014
+#Sat Apr 12 18:03:31 PDT 2014
 target2.width=100
 target5.naviview.expanded=false
 class.Ghost.superclass=greenfoot.Actor
@@ -43,8 +43,8 @@ target5.name=Avatar
 world.lastInstantiated=background
 mainWindow.width=1382
 target5.height=50
-class.Ghost.image=Picture1.png
 target7.editor.width=900
+class.Ghost.image=Picture1.png
 target2.type=ClassTarget
 class.Goldcoin.image=yellow-draught.png
 target4.editor.y=0

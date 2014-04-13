@@ -13,9 +13,10 @@ public class background extends World
     //      a = avatar       f = floor           b = brownblock
     //      c = brownblockL  g = Goldcoin        h = Bluecoin
     //      r = Redcoin      d = Brickblock      w = Ghos
+    //      z = Counter
     public void setFields()
     {
-        map = new String[] { "  r                     ",
+        map = new String[] { "  r               z     ",
                              "  ddd           b       ",
                              "                        ",
                              "        grrwrrg         ",
@@ -45,7 +46,7 @@ public class background extends World
         setFields();
         for (int i=0; i<map.length; i++) for (int j=0; j<map[i].length(); j++)
             {
-                int kind = "afbcghrdw".indexOf(""+map[i].charAt(j));
+                int kind = "afbcghrdwz".indexOf(""+map[i].charAt(j));
                 if (kind < 0) continue;
                 Actor actor = null;
                 if (kind == 0) actor = new Avatar();
@@ -57,6 +58,7 @@ public class background extends World
                 if (kind == 6) actor = new Redcoin();
                 if (kind == 7) actor = new Brickblock();
                 if (kind == 8) actor = new Ghost();
+                if (kind == 9) actor = new Counter();
                 addObject(actor, 16+j*32, 16+i*32);
             }
         //Avatar avatar = new Avatar();
@@ -66,6 +68,22 @@ public class background extends World
         
        // addObject( floor, 600, 8);
     }
+  
+
+  // HealthBar healthbar = new HealthBar();
+
+    
+    public HealthBar getHealthBar()
+    {
+        //return healthbar;
+        return null;
+    }
+        
+    /**
+     * Constructor for objects of class JavaBackground.
+     * 
+     */
+
     
 }
 

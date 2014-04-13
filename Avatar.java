@@ -8,6 +8,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Avatar extends Actor
 {
+    boolean touchingSpikyBall2 = false;
+    boolean touchingSpikyBall3 = false;
+    private Counter counter;
     private int vSpeed = 0;
     private boolean jumping = false;
     private int jumpheight = 16;
@@ -31,6 +34,7 @@ public class Avatar extends Actor
        CheckKey();
        CheckFall();
        collectCoin();
+       Collision();
     }
     public void CheckKey()
     {
@@ -217,4 +221,54 @@ public class Avatar extends Actor
             return false;
         }
     }
+    //Shefali 
+    //public Avatar(Counter pointCounter)
+   // {
+   //     counter = pointCounter;
+   // }
+    
+    public void Collision()
+    {
+    Actor collision1 = getOneIntersectingObject(Spikyball2.class); 
+    Actor collision2 = getOneIntersectingObject(Spikyball3.class);
+    Actor collision3 = getOneIntersectingObject(Ghost.class);
+    
+    if(collision1 != null)//if you have not run into it 
+    {
+       World myWorld = getWorld();
+       background space = (background)myWorld;
+       HealthBar healthbar = space.getHealthBar();
+       if(touchingSpikyBall2 == false)
+       if(touchingSpikyBall3 == false)
+       {
+           healthbar.loseHealth();
+           touchingSpikyBall2 = true;
+           touchingSpikyBall3 = true;
+           if(healthbar.health <=0)
+           {
+              myWorld.removeObject(this);
+            }
+        }
+       counter.add(1);
+       Greenfoot.playSound("hooray.wav");
+    }else {
+        touchingSpikyBall2 = false;
+        touchingSpikyBall3 = false;
+    
+    if(collision2 != null)//if you have not run into it 
+    {
+       counter.add(1);
+       Greenfoot.playSound("explosion.wav");
+    }
 }
+    
+    if(collision3 != null)//if you have not run into it 
+    {
+       counter.add(1);
+       Greenfoot.playSound("fanfare.wav");
+    }
+    
+}  
+
+}
+

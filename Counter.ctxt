@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Counter()
+comment0.text=\r\n\ Create\ a\ new\ counter,\ initialised\ to\ 0.\r\n
+comment1.params=
+comment1.target=void\ act()
+comment2.params=score
+comment2.target=void\ add(int)
+comment2.text=\r\n\ Add\ a\ new\ score\ to\ the\ current\ counter\ value.\r\n
+comment3.params=
+comment3.target=int\ getValue()
+comment3.text=\r\n\ Return\ the\ current\ counter\ value.\r\n
+comment4.params=newValue
+comment4.target=void\ setValue(int)
+comment4.text=\r\n\ Set\ a\ new\ counter\ value.\r\n
+comment5.params=count
+comment5.target=void\ addValue(int)
+comment6.params=
+comment6.target=void\ updateImage()
+comment6.text=\r\n\ Update\ the\ image\ on\ screen\ to\ show\ the\ current\ value.\r\n
+numComments=7

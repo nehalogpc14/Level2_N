@@ -249,7 +249,7 @@ public class Avatar extends Actor
                // }
             }
             counter.add(1);
-            Greenfoot.playSound("hooray.wav");
+            Greenfoot.playSound("explosion.wav");
         }
     
         if(collision2 != null)//if you have not run into it 

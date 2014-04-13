@@ -13,7 +13,7 @@ public class background extends World
     //      a = avatar       f = floor           b = brownblock
     //      c = brownblockL  g = Goldcoin        h = Bluecoin
     //      r = Redcoin      d = Brickblock      w = Ghos
-    //      z = Counter      s = Spikyball2
+    //      z = Counter      s = Spikyball2      q = Spikyball3
     public void setFields()
     {
         map = new String[] { "  r               z     ",
@@ -26,7 +26,7 @@ public class background extends World
                              "        g      r        ",
                              "      ddd  b  ddd       ",
                              "                        ",
-                             "                   s    ",
+                             "     q             s    ",
                              "    gr             rh   ",
                              "   ddd            ddd   ",
                              "  a                     ",
@@ -47,7 +47,7 @@ public class background extends World
         for (int i=0; i<map.length; i++) for (int j=0; j<map[i].length(); j++)
             {
                 Counter counter = new Counter();
-                int kind = "afbcghrdwzs".indexOf(""+map[i].charAt(j));
+                int kind = "afbcghrdwzsq".indexOf(""+map[i].charAt(j));
                 if (kind < 0) continue;
                 Actor actor = null;
                 if (kind == 0) actor = new Avatar(counter);
@@ -61,6 +61,7 @@ public class background extends World
                 if (kind == 8) actor = new Ghost();
                 if (kind == 9) actor = counter;
                 if (kind == 10) actor = new Spikyball2();
+                if (kind == 11) actor = new Spikyball3();
                 addObject(actor, 16+j*32, 16+i*32);
             }
         //Avatar avatar = new Avatar();

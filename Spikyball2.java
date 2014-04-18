@@ -31,7 +31,7 @@ public class Spikyball2 extends Actor
     {
         setLocation ( getX(), getY() + vSpeed);
         vSpeed = vSpeed + acceleration;
-        if (onGround() || getY()<=100 && vSpeed<0)
+        if (onGround() || getY()<=150 && vSpeed<0)
         {
            vSpeed=-vSpeed + acceleration;
         }

@@ -84,4 +84,3 @@ public class Counter extends Actor
         setImage(image);
     }
 }
-

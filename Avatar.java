@@ -11,6 +11,11 @@ public class Avatar extends Actor
     boolean touchingSpikyBall2 = false;
     boolean touchingSpikyBall3 = false;
     private Counter counter;
+     public Avatar(Counter pointCounter)
+    {
+        counter = pointCounter;
+    }
+    
     private int vSpeed = 0;
     private boolean jumping = false;
     private int jumpheight = 16;
@@ -222,11 +227,7 @@ public class Avatar extends Actor
         }
     }
     //Shefali 
-    public Avatar(Counter pointCounter)
-    {
-        counter = pointCounter;
-    }
-    
+   
     public void Collision()
     {
         Actor collision1 = getOneIntersectingObject(Spikyball2.class); 

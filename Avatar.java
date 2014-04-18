@@ -244,9 +244,9 @@ public class Avatar extends Actor
                 touchingSpikyBall2 = true;
                 touchingSpikyBall3 = true;
                 //if(healthbar.health <=0)
-                //{
-                   // myWorld.removeObject(this);
-               // }
+              //   {
+               //     myWorld.removeObject(this);
+               //  }
             }
             counter.add(1);
             Greenfoot.playSound("explosion.wav");

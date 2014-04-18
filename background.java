@@ -17,8 +17,8 @@ public class background extends World
     //      m = Healthbar
     public void setFields()
     {
-        map = new String[] { "  r            z        ",
-                             "  ddd                m  ",
+        map = new String[] { "               z        ",
+                             "                     m  ",
                              "                        ",
                              "        grrwrrg         ",
                              "       ddddddddd        ",

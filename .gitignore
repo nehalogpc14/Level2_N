@@ -1,6 +1,9 @@
 #################
 ## Eclipse
 #################
+*.class
+*.ctxt
+*.greenfoot
 
 *.pydevproject
 .project

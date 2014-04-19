@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=num\ sf
+comment0.target=Rocks(int,\ int)
+comment1.params=
+comment1.target=int\ getNumber()
+comment2.params=
+comment2.target=void\ act()
+numComments=3

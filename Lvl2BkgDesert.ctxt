@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Lvl2BkgDesert()
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Lvl2BkgDesert.\r\n\ \r\n
+comment1.params=num
+comment1.target=void\ IncrementDarts(int)
+comment2.params=num
+comment2.target=void\ DecrememntDarts(int)
+comment3.params=
+comment3.target=int\ GetAvailDarts()
+numComments=4

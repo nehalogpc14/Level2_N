@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=rotation
+comment0.target=Darts(int)
+comment1.params=
+comment1.target=void\ act()
+comment2.params=
+comment2.target=boolean\ touchingDemon()
+comment3.params=
+comment3.target=boolean\ atSide()
+numComments=4

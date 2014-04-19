@@ -9,7 +9,7 @@ import java.lang.*;
  */
 public class SurpriseBox extends Actor
 {
-    PointsBar pointsBar;
+    private Counter counter;
     private GreenfootSound soundapp = new GreenfootSound("applause.wav");
     private GreenfootSound soundno = new GreenfootSound("beep1.wav");
     private GreenfootImage open = new GreenfootImage("opened-box.png");
@@ -17,12 +17,11 @@ public class SurpriseBox extends Actor
     private GreenfootImage plus10 = new GreenfootImage("10plus.png");
     private GreenfootImage minus10 = new GreenfootImage("10minus.png");
     int timer;
-    int counter;
     int delta = 0;
 
-    public SurpriseBox(PointsBar pb)
+    public SurpriseBox(Counter counter)
     {
-        pointsBar = pb;
+        this.counter = counter;
         setImage(close);
 
     }
@@ -61,7 +60,7 @@ public class SurpriseBox extends Actor
          
         if (timer == 160)
             {
-                pointsBar.updateScore(delta);
+                counter.add(delta);
                 getWorld().removeObject(this);
                 timer = 0;
                 delta = 0;

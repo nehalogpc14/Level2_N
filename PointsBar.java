@@ -53,11 +53,6 @@ public class PointsBar extends Actor
     {
         //         updateScore(2);
         updateTimeRem(-1);
-    }    
-    {
-        //         timer = new Timer(1000, this);
-        //         timer.setInitialDelay(1000);
-        //         timer.start();
-    }    
+    }     
 
 }

@@ -1,5 +1,4 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
 /**
  * Write a description of class background here.
  * 
@@ -8,7 +7,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class background extends World
 {
+    Counter counter;
     String[] map;
+    
      /** ********************      MAP LEGEND     *********************** */
     //      a = avatar       f = floor           b = brownblock
     //      c = brownblockL  g = Goldcoin        h = Bluecoin
@@ -46,7 +47,7 @@ public class background extends World
         super(800, 500, 1); 
                prepare();
         setFields();
-         Counter counter = new Counter();
+         counter = new Counter();
          PointsBar pb = new PointsBar();
                 
         for (int i=0; i<map.length; i++) for (int j=0; j<map[i].length(); j++)
@@ -91,8 +92,8 @@ public class background extends World
         addObject(pointsbar, 33, 29);
         pointsbar.setLocation(112, 18);
 
-        SurpriseBox surpriseBox = new SurpriseBox(pointsbar);
-        addObject (surpriseBox, 400, 543);
+        SurpriseBox surpriseBox = new SurpriseBox(counter);
+        addObject (surpriseBox, 400, 400);
         
         PowerUp powerUp = new PowerUp(pointsbar);
         addObject(powerUp, 300, 323);

@@ -13,6 +13,7 @@ public class Counter extends Actor
     private GreenfootImage background;
     public int value;
     public int target;
+    private int score;
 
     /**
      * Create a new counter, initialised to 0.

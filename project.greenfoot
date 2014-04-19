@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Fri Apr 18 17:33:16 PDT 2014
+#Fri Apr 18 17:36:20 PDT 2014
 target2.name=brownblock
 class.Spikyball2.image=132034190I8Lc77A.gif
 target9.name=Brickblock
@@ -118,6 +118,7 @@ target3.editor.height=700
 target11.x=100
 target12.editor.height=700
 class.Spikyball3.superclass=greenfoot.Actor
+class.PowerUp.superclass=greenfoot.Actor
 target5.editor.width=889
 target8.showInterface=false
 dependency3.from=Avatar
@@ -178,6 +179,7 @@ dependency18.from=Avatar
 target14.y=310
 target14.x=10
 target10.type=ClassTarget
+class.PowerUp.image=greentimer.png
 dependency18.to=Spikyball3
 dependency21.type=UsesDependency
 package.numDependencies=26

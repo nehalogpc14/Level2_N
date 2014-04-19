@@ -25,6 +25,7 @@ public class Avatar extends Actor
     private GreenfootImage run2l = new GreenfootImage("run2l.png");
     private GreenfootImage run3l = new GreenfootImage("run3l.png");
     private GreenfootImage run4l = new GreenfootImage("run4l.png");
+    private GreenfootImage open = new GreenfootImage("opened-box.png");
     private int frame = 1;
     private int animationCounter = 0;
 

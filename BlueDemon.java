@@ -1,3 +1,5 @@
+ 
+
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.Random;
 
@@ -17,7 +19,9 @@ public class BlueDemon extends Actor
 
     private static final int WEST = 1;
     private static final int EAST = 2;
+    
     public boolean GameOver;
+    
     //  GreenfootSound proton = new GreenfootSound("proton.wav");
 
     private int direction;
@@ -34,6 +38,8 @@ public class BlueDemon extends Actor
         if(canMove())
         {
             move();
+            Random randomobj = new Random();
+            int randnum = randomobj.nextInt(10);
         }
         else 
         {
@@ -42,9 +48,21 @@ public class BlueDemon extends Actor
         
         if (touchingBullet())
         {      
-           //Remove Bullet and Demon objects;
-           Actor d = getOneObjectAtOffset(0, 0, Darts.class);
+           Lvl2BkgDesert myWorld = (Lvl2BkgDesert)getWorld();
+               int n = myWorld.GetAvailDarts();
+               System.out.println(n); 
+               
+           if (n == 0) 
+            {
+               getWorld().addObject(new DemonExplosion(), getWorld().getWidth()/2, getWorld().getHeight()/2);
+               GameOver = true;
+               getWorld().removeObject(this);
+            }
+            
+            //Remove Bullet and Demon objects;
 
+           Actor d = getOneObjectAtOffset(0, 0, Darts.class);
+    
            if (d != null)
            {
                 GreenfootImage image = getImage();  
@@ -59,7 +77,9 @@ public class BlueDemon extends Actor
 
                getWorld().removeObject(d);
                getWorld().addObject(new Explosion(), getX(), getY());     
-            if (image.getHeight() <= 50)
+            
+
+               if ((image.getHeight() <= 50)) 
             {
                getWorld().addObject(new DemonExplosion(), getWorld().getWidth()/2, getWorld().getHeight()/2);
                GameOver = true;
@@ -69,6 +89,9 @@ public class BlueDemon extends Actor
             {
                 //Explosion because of hit       
                 getWorld().addObject(new Explosion(), getX(), getY());
+                
+                //Change location to random after hit
+                setLocation(50+Greenfoot.getRandomNumber(700), 200+Greenfoot.getRandomNumber(300));
             }
 
        
@@ -88,17 +111,19 @@ public class BlueDemon extends Actor
      */
     public void move()
     {
+    
         if (!canMove()) {
             return;
         }
         switch(direction) {
             case EAST :
-                setLocation(getX() + 1, getY());
+                setLocation(getX() + 2, getY());
                 break;
             case WEST :
-                setLocation(getX() - 1, getY());
+                setLocation(getX() - 2, getY());
                 break;
         }
+    
     }
 
     /**
@@ -109,12 +134,13 @@ public class BlueDemon extends Actor
         World myWorld = getWorld();
         int x = getX();
         int y = getY();
+
         switch(direction) {
             case WEST :
-                x--;
+                x=x-1;
                 break;
             case EAST :
-                x++;
+                x=x+1;
                 break;
         }
         // test for outside border

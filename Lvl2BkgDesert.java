@@ -1,3 +1,5 @@
+ 
+
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
@@ -9,7 +11,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Lvl2BkgDesert extends World
 {
     public int AvailDarts = 100;
-    public boolean GameOver;
+
     /**
      * Constructor for objects of class Lvl2BkgDesert.
      * 
@@ -19,11 +21,11 @@ public class Lvl2BkgDesert extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(800, 600, 1); 
         Greenfoot.playSound("Lvl2Music.mp3");
-        // Create the demon object
+         //Create the demon object
         BlueDemon bluedemon = new BlueDemon();
         
         // Put Blue Demon in our world
-        addObject(bluedemon,650, getHeight() - getHeight()/3);
+        addObject(bluedemon,50+Greenfoot.getRandomNumber(700), 30+getHeight()/4);
         
         //adds Launcher into World
         Launcher myLauncher = new Launcher(AvailDarts);
@@ -54,12 +56,7 @@ public class Lvl2BkgDesert extends World
     public void DecrememntDarts(int num)
     {
        AvailDarts = AvailDarts - num;
-       if(AvailDarts < 1)
-       {
-           //getWorld().addObject(new DemonExplosion(), getWorld().getWidth()/2, getWorld().getHeight()/2);
-           GameOver = true;
-           //getWorld().removeObject(this);
-       }
+       
     }
     public int GetAvailDarts()
     {

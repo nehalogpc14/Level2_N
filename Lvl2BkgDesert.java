@@ -11,7 +11,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Lvl2BkgDesert extends World
 {
     public int AvailDarts = 100;
-
+    
     /**
      * Constructor for objects of class Lvl2BkgDesert.
      * 
@@ -30,24 +30,38 @@ public class Lvl2BkgDesert extends World
         //adds Launcher into World
         Launcher myLauncher = new Launcher(AvailDarts);
         addObject(myLauncher,getWidth()/2,getHeight()+5);
-        Rocks myRocks = new Rocks(1, 100 + Greenfoot.getRandomNumber(75));
-        addObject(myRocks, 50 + Greenfoot.getRandomNumber(300), 200 + Greenfoot.getRandomNumber(200));
+        
+        
+        Rocks myRocks = new Rocks(1, 100 + Greenfoot.getRandomNumber(50));
+        addObject(myRocks, 50 + Greenfoot.getRandomNumber(200), 175 + Greenfoot.getRandomNumber(100));
         //addObject(myRocks, Greenfoot.getRandomNumber(getWidth()-200)+100, Greenfoot.getRandomNumber(getHeight()-200)+100);       
-        Rocks myRocks2 = new Rocks(3, 100 + Greenfoot.getRandomNumber(75));
-        addObject(myRocks2, 50 + Greenfoot.getRandomNumber(300), 200 + Greenfoot.getRandomNumber(200));
+        Rocks myRocks2 = new Rocks(3, 100 + Greenfoot.getRandomNumber(50));
+        addObject(myRocks2, 50 + Greenfoot.getRandomNumber(200), 325 + Greenfoot.getRandomNumber(100));
          //addObject(myRocks2, Greenfoot.getRandomNumber(getWidth()-200)+100, Greenfoot.getRandomNumber(getHeight()-200)+100);         
-        Rocks myRocks3 = new Rocks(4, 100 + Greenfoot.getRandomNumber(75));
-        addObject(myRocks3, 450 + Greenfoot.getRandomNumber(300), 300 + Greenfoot.getRandomNumber(200));
+        Rocks myRocks3 = new Rocks(4, 100 + Greenfoot.getRandomNumber(50));
+        addObject(myRocks3, 300 + Greenfoot.getRandomNumber(200), 175 + Greenfoot.getRandomNumber(100));
          //addObject(myRocks3, Greenfoot.getRandomNumber(getWidth()-200)+100, Greenfoot.getRandomNumber(getHeight()-200)+100);
         
-        Rocks myRocks4 = new Rocks(5, 100 + Greenfoot.getRandomNumber(75));
-        addObject(myRocks4, 450 + Greenfoot.getRandomNumber(300), 300 + Greenfoot.getRandomNumber(200));
+        Rocks myRocks4 = new Rocks(5, 100 + Greenfoot.getRandomNumber(50));
+        addObject(myRocks4, 300 + Greenfoot.getRandomNumber(200), 325 + Greenfoot.getRandomNumber(100));
+        //addObject(myRocks4, Greenfoot.getRandomNumber(getWidth()-200)+100, Greenfoot.getRandomNumber(getHeight()-200)+100);
+        
+        Rocks myRocks5 = new Rocks(4, 100 + Greenfoot.getRandomNumber(50));
+        addObject(myRocks5, 550 + Greenfoot.getRandomNumber(200), 175 + Greenfoot.getRandomNumber(100));
+         //addObject(myRocks3, Greenfoot.getRandomNumber(getWidth()-200)+100, Greenfoot.getRandomNumber(getHeight()-200)+100);
+        
+        Rocks myRocks6 = new Rocks(5, 100 + Greenfoot.getRandomNumber(50));
+        addObject(myRocks6, 550 + Greenfoot.getRandomNumber(200), 325 + Greenfoot.getRandomNumber(100));
         //addObject(myRocks4, Greenfoot.getRandomNumber(getWidth()-200)+100, Greenfoot.getRandomNumber(getHeight()-200)+100);
         
         DemonExplosion demonexplosion = new DemonExplosion();
         
+        
         AvailableDarts myAD = new AvailableDarts();
         addObject(myAD, 700, 30);
+        
+        Level2Label myL2L = new Level2Label();
+        addObject (myL2L, 85, 38);
     }
     public void IncrementDarts(int num)
     {

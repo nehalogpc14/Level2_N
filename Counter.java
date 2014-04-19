@@ -31,14 +31,14 @@ public class Counter extends Actor
      //*/
     public void act() 
     {
-        if (value < target) {
-            value++;
+        //if (value < target) {
+           // value++;
             updateImage();
-        }
-        else if (value > target) {
-            value--;
-            updateImage();
-        }
+        //}
+       // else if (value > target) {
+            //value--;
+            //updateImage();
+        //}
     }
 
     /**
@@ -46,7 +46,7 @@ public class Counter extends Actor
      */
     public void add(int score)
     {
-        target -= score;
+        value += score;
     }
 
     /**
@@ -57,21 +57,7 @@ public class Counter extends Actor
         return value;
     }
 
-    /**
-     * Set a new counter value.
-     */
-    public void setValue(int newValue)
-    {
-        target = newValue;
-        value = newValue;
-        updateImage();
-    }
-    
-    public void addValue(int count)
-    {
-        value = value + 1;
-    }
-
+   
     /**
      * Update the image on screen to show the current value.
      */

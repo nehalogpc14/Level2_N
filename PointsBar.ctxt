@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.params=
+comment0.target=PointsBar()
+comment1.params=delta
+comment1.target=int\ updateScore(int)
+comment2.params=delta
+comment2.target=int\ updateTimeRem(int)
+comment3.params=
+comment3.target=void\ update()
+comment4.params=
+comment4.target=void\ act()
+comment4.text=\r\n\ Act\ -\ do\ whatever\ the\ PointsBar\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+numComments=5

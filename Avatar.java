@@ -11,11 +11,7 @@ public class Avatar extends Actor
     boolean touchingSpikyBall2 = false;
     boolean touchingSpikyBall3 = false;
     private Counter counter;
-     public Avatar(Counter pointCounter)
-    {
-        counter = pointCounter;
-    }
-    
+  
     private int vSpeed = 0;
     private boolean jumping = false;
     private int jumpheight = 16;
@@ -32,6 +28,10 @@ public class Avatar extends Actor
     private int frame = 1;
     private int animationCounter = 0;
 
+    public Avatar(Counter pointCounter)
+    {
+        counter = pointCounter;
+    }
     
  //Walking Avatar
     public void act() 
@@ -200,6 +200,7 @@ public class Avatar extends Actor
         if(Coinscollected()) 
         {
             getCoin();
+            counter.add(1);
             Greenfoot.playSound("Coin.wav");
         }
     }
@@ -226,6 +227,7 @@ public class Avatar extends Actor
             return false;
         }
     }
+
     //Shefali 
    
     public void Collision()

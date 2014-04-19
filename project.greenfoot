@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Sat Apr 19 14:52:29 PDT 2014
+#Sat Apr 19 15:30:05 PDT 2014
 target2.name=brownblock
 class.Spikyball2.image=132034190I8Lc77A.gif
 target9.name=Brickblock
@@ -52,6 +52,7 @@ class.Redcoin.image=red-draught.png
 target13.type=ClassTarget
 dependency24.type=UsesDependency
 dependency21.from=Avatar
+class.Spikyball.superclass=Spikyball2
 target12.naviview.expanded=false
 dependency9.to=Brickblock
 class.Avatar.image=run0.png
@@ -117,7 +118,7 @@ target11.y=310
 target3.editor.height=700
 target11.x=100
 target12.editor.height=700
-class.Spikyball3.superclass=greenfoot.Actor
+class.Spikyball3.superclass=Spikyball2
 class.PowerUp.superclass=greenfoot.Actor
 target5.editor.width=889
 target8.showInterface=false
@@ -131,6 +132,7 @@ target7.width=80
 target11.editor.height=700
 target2.editor.height=700
 target13.name=Coin
+class.Spikyball.image=smiley3.png
 dependency21.to=Counter
 target7.naviview.expanded=false
 target6.name=Goldcoin

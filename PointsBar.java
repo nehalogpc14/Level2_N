@@ -52,7 +52,7 @@ public class PointsBar extends Actor
     public void act() 
     {
         //         updateScore(2);
-        //         updateTimeRem(-1);
+        updateTimeRem(-1);
     }    
     {
         //         timer = new Timer(1000, this);

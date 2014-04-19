@@ -28,7 +28,7 @@ public class background extends World
                              "        g      r        ",
                              "      ddd  b  ddd       ",
                              "                        ",
-                             "     q             s    ",
+                             "    q              s    ",
                              "    gr             rh   ",
                              "   ddd            ddd   ",
                              "  a                     ",

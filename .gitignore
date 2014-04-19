@@ -16,6 +16,9 @@ local.properties
 .settings/
 .loadpath
 
+*.class
+*.ctxt
+
 # External tool builders
 .externalToolBuilders/
 

@@ -45,11 +45,12 @@ public class background extends World
         super(800, 500, 1); 
         //setBackground(new GreenfootImage("StartScreen.png")); // Splash Screen
         setFields();
+         Counter counter = new Counter();
+         PointsBar pb = new PointsBar();
+                
         for (int i=0; i<map.length; i++) for (int j=0; j<map[i].length(); j++)
             {
-                Counter counter = new Counter();
-                PointsBar pb = new PointsBar();
-                
+               
                 int kind = "afbcghrdwzsqm".indexOf(""+map[i].charAt(j));
                 if (kind < 0) continue;
                 Actor actor = null;
@@ -66,7 +67,7 @@ public class background extends World
                 if (kind == 10) actor = new Spikyball2();
                 if (kind == 11) actor = new Spikyball3();
                 if (kind == 12) actor = new HealthBar();
-//                 if (kind == 13) actor = new PowerUp();
+              // if (kind == 13) actor = new PowerUp();
              //   if (kind == 13) actor = new SurpriseBox(PointsBar pb);
              //   if (kind == 14) actor = new PointsBar();
                 addObject(actor, 16+j*32, 16+i*32);

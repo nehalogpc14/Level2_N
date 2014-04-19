@@ -252,20 +252,20 @@ public class Avatar extends Actor
                //     myWorld.removeObject(this);
                //  }
             }
-            counter.add(1);
+            counter.add(-1);
             Greenfoot.playSound("explosion.wav");
         }
     
         if(collision2 != null)//if you have not run into it 
         {
-            counter.add(1);
+            counter.add(-1);
             Greenfoot.playSound("explosion.wav");
         }
 
     
         if(collision3 != null)//if you have not run into it 
         {
-            counter.add(1);
+            counter.add(-1);
             Greenfoot.playSound("Ghosthit.wav");
         }
     

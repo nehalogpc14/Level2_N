@@ -15,6 +15,7 @@ public class background extends World
     //      r = Redcoin      d = Brickblock      w = Ghos
     //      z = Counter      s = Spikyball2      q = Spikyball3
     //      m = Healthbar    x = SurpriseBox     p = PowerUp
+    
     public void setFields()
     {
         map = new String[] { "               z      m ",
@@ -41,9 +42,9 @@ public class background extends World
      */
     public background()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+
         super(800, 500, 1); 
-        //setBackground(new GreenfootImage("StartScreen.png")); // Splash Screen
+               prepare();
         setFields();
          Counter counter = new Counter();
          PointsBar pb = new PointsBar();
@@ -72,12 +73,6 @@ public class background extends World
              //   if (kind == 14) actor = new PointsBar();
                 addObject(actor, 16+j*32, 16+i*32);
             }
-        //Avatar avatar = new Avatar();
-       // Floor floor = new Floor();
-        
-       // addObject( avatar, 350, 350);
-        
-       // addObject( floor, 600, 8);
     }
   
 

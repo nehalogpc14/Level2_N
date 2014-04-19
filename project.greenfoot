@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Sat Apr 19 14:22:39 PDT 2014
+#Sat Apr 19 14:52:29 PDT 2014
 target2.name=brownblock
 class.Spikyball2.image=132034190I8Lc77A.gif
 target9.name=Brickblock
@@ -286,13 +286,13 @@ target3.editor.width=900
 target12.width=90
 dependency2.type=UsesDependency
 target4.y=70
-target4.x=70
 class.Spikyball2.superclass=greenfoot.Actor
-target12.height=50
-target8.editor.y=23
-dependency6.from=background
-dependency9.type=UsesDependency
+target4.x=70
 class.brownblockL.superclass=Floor
+dependency9.type=UsesDependency
+dependency6.from=background
+target8.editor.y=23
+target12.height=50
 target8.editor.x=323
 target14.editor.height=700
 target11.editor.width=900

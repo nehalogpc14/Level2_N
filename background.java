@@ -89,6 +89,20 @@ public class background extends World
         return null;
     }
         
+     private void prepare()
+    {
+        PointsBar pointsbar = new PointsBar();
+        addObject(pointsbar, 33, 29);
+        pointsbar.setLocation(112, 18);
+
+        SurpriseBox surpriseBox = new SurpriseBox(pointsbar);
+        addObject (surpriseBox, 400, 543);
+        
+        PowerUp powerUp = new PowerUp(pointsbar);
+        addObject(powerUp, 300, 323);
+        
+    }
+    
     /**
      * Constructor for objects of class JavaBackground.
      * 

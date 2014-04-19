@@ -7,4 +7,6 @@ comment1.target=background()
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ background.\r\n\ \r\n
 comment2.params=
 comment2.target=HealthBar\ getHealthBar()
-numComments=3
+comment3.params=
+comment3.target=void\ prepare()
+numComments=4

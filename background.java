@@ -9,32 +9,32 @@ public class background extends World
 {
     Counter counter;
     String[] map;
-    
-     /** ********************      MAP LEGEND     *********************** */
+
+    /** ********************      MAP LEGEND     *********************** */
     //      a = avatar       f = floor           b = brownblock
     //      c = brownblockL  g = Goldcoin        h = Bluecoin
     //      r = Redcoin      d = Brickblock      w = Ghos
     //      z = Counter      s = Spikyball2      q = Spikyball3
     //      m = Healthbar    x = SurpriseBox     p = PowerUp
-    
+
     public void setFields()
     {
         map = new String[] { "               z      m ",
-                             "                        ",
-                             "           p            ",
-                             "        grrwrrg         ",
-                             "       ddddddddd        ",
-                             "  gg                gg  ",
-                             "  dd                dd  ",
-                             "        g      r        ",
-                             "      ddd  b  ddd       ",
-                             "                        ",
-                             "    q              s    ",
-                             "    gr             rh   ",
-                             "   ddd            ddd   ",
-                             "  a                     ",
-                             "        g r   r  g      ",
-                             "fffffffffffffffffffffffff" };
+            "                        ",
+            "           p            ",
+            "        grrwrrg         ",
+            "       ddddddddd        ",
+            "  gg                gg  ",
+            "  dd                dd  ",
+            "        g      r        ",
+            "      ddd  b  ddd       ",
+            "                        ",
+            "    q              s    ",
+            "    gr             rh   ",
+            "   ddd            ddd   ",
+            "  a                     ",
+            "        g r   r  g      ",
+            "fffffffffffffffffffffffff" };
     }
 
     /**
@@ -45,14 +45,15 @@ public class background extends World
     {    
 
         super(800, 500, 1); 
-               prepare();
+
         setFields();
-         counter = new Counter();
-         PointsBar pb = new PointsBar();
-                
+        counter = new Counter();
+        prepare();
+        //PointsBar pb = new PointsBar();
+
         for (int i=0; i<map.length; i++) for (int j=0; j<map[i].length(); j++)
             {
-               
+
                 int kind = "afbcghrdwzsqm".indexOf(""+map[i].charAt(j));
                 if (kind < 0) continue;
                 Actor actor = null;
@@ -69,24 +70,22 @@ public class background extends World
                 if (kind == 10) actor = new Spikyball2();
                 if (kind == 11) actor = new Spikyball3();
                 if (kind == 12) actor = new HealthBar();
-              // if (kind == 13) actor = new PowerUp();
-             //   if (kind == 13) actor = new SurpriseBox(PointsBar pb);
-             //   if (kind == 14) actor = new PointsBar();
+                // if (kind == 13) actor = new PowerUp();
+                //   if (kind == 13) actor = new SurpriseBox(PointsBar pb);
+                //   if (kind == 14) actor = new PointsBar();
                 addObject(actor, 16+j*32, 16+i*32);
-            }
+        }
     }
-  
 
-  // HealthBar healthbar = new HealthBar();
-
+    // HealthBar healthbar = new HealthBar();
     
     public HealthBar getHealthBar()
     {
         //return healthbar;
         return null;
     }
-        
-     private void prepare()
+
+    private void prepare()
     {
         PointsBar pointsbar = new PointsBar();
         addObject(pointsbar, 33, 29);
@@ -94,17 +93,15 @@ public class background extends World
 
         SurpriseBox surpriseBox = new SurpriseBox(counter);
         addObject (surpriseBox, 400, 400);
-        
+
         PowerUp powerUp = new PowerUp(pointsbar);
         addObject(powerUp, 300, 323);
-        
+
     }
-    
+
     /**
      * Constructor for objects of class JavaBackground.
      * 
      */
 
-    
 }
-

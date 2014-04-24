@@ -11,7 +11,7 @@ public class Avatar extends Actor
     boolean touchingSpikyBall2 = false;
     boolean touchingSpikyBall3 = false;
     private Counter counter;
-  
+    private boolean haskey = false;
     private int vSpeed = 0;
     private boolean jumping = false;
     private int jumpheight = 16;
@@ -40,6 +40,7 @@ public class Avatar extends Actor
        CheckKey();
        CheckFall();
        collectCoin();
+       grab();
        Collision();
     }
     public void CheckKey()
@@ -228,6 +229,34 @@ public class Avatar extends Actor
             return false;
         }
     }
+    // Taking the key
+     public void grab()
+    {
+        if (canSee(Key.class) )
+        {
+            get(Key.class);
+            haskey = true;
+           // score = score + 10;
+            //Greenfoot.playSound("keyfound.wav");
+        }
+    }
+
+    public void exit() // If Player has the key, they can open the door.
+    {
+        if (canSee(Door.class) && haskey == true) ((background)getWorld()).nextLevel();
+    }
+      public boolean canSee(Class clss)
+    {
+        Actor actor = getOneObjectAtOffset(0, 0, clss);
+        return actor != null;        
+    }
+    public void get(Class clss)
+    {
+        Actor actor = getOneObjectAtOffset(0, 0, clss);
+        if(actor != null) {
+            getWorld().removeObject(actor);
+        }
+    }   
 
     //Shefali 
    

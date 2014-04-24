@@ -5,7 +5,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class background extends World
+public class background1 extends World
 {
     Counter counter;
     String[] map;
@@ -29,11 +29,11 @@ public class background extends World
             "        g      r        ",
             "      ddd  b  ddd       ",
             "                        ",
-            "    q              s    ",
-            "    gr             rh   ",
-            "   ddd            ddd   ",
-            "  a                     ",
-            "        g r   r  g      ",
+            "                   s    ",
+            "                        ",
+            "                        ",
+            "                        ",
+            "                        ",
             "fffffffffffffffffffffffff" };
     }
 
@@ -41,7 +41,7 @@ public class background extends World
      * Constructor for objects of class background.
      * 
      */
-    public background()
+    public background1()
     {    
 
         super(800, 500, 1); 
@@ -78,11 +78,6 @@ public class background extends World
                 addObject(actor, 16+j*32, 16+i*32);
         }
     }
-     public void nextLevel()
-    {
-        Greenfoot.setWorld(new background1());
-    }
-
     // HealthBar healthbar = new HealthBar();
     
     public HealthBar getHealthBar()
@@ -111,3 +106,4 @@ public class background extends World
      */
 
 }
+

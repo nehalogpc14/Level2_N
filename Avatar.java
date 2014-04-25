@@ -41,6 +41,7 @@ public class Avatar extends Actor
        CheckFall();
        collectCoin();
        grab();
+       exit();
        Collision();
     }
     public void CheckKey()
@@ -269,8 +270,6 @@ public class Avatar extends Actor
         if(collision1 != null)//if you have not run into it 
         {
             World myWorld = getWorld();
-            background space = (background)myWorld;
-           // HealthBar healthbar = space.getHealthBar();
             if(touchingSpikyBall3 == false)
             {
                // healthbar.loseHealth();

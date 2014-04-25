@@ -13,27 +13,27 @@ public class background1 extends World
     /** ********************      MAP LEGEND     *********************** */
     //      a = avatar       f = floor           b = brownblock
     //      c = brownblockL  g = Goldcoin        h = Bluecoin
-    //      r = Redcoin      d = Brickblock      w = Ghos
+    //      r = Redcoin      d = Brickblock      w = Ghost
     //      z = Counter      s = Spikyball2      q = Spikyball3
     //      m = Healthbar    x = SurpriseBox     p = PowerUp
     //      k = key          o = Door
     public void setFields()
     {
         map = new String[] { "               z      m ",
-            "  o                     ",
-            " ddd       p            ",
-            "        grrwrkg         ",
-            "       ddddddddd        ",
-            "  gg                gg  ",
-            "  dd                dd  ",
-            "        g      r        ",
-            "      ddd  b  ddd       ",
-            "                        ",
-            "                   s    ",
             "                        ",
             "                        ",
+            "                q       ",
+            "              rgrrg     ",
+            " b          ddddddd     ",
+            "          dddddd        ",
+            "   w                    ",
+            "  hgg              gg   ",
+            " ddddd  c         ddd   ",
+            "               rrrh     ",
+            "             dddddd     ",
             "                        ",
-            "                        ",
+            "   a                    ",
+            "      rgrhrgrhrg        ",
             "fffffffffffffffffffffffff" };
     }
 

@@ -7,12 +7,12 @@ import java.util.*;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Explosion extends Actor
+public class DemonExplosionMulti extends Actor
 {
     int sx = 20;
     int sy = 20;
     
-    public Explosion()
+    public DemonExplosionMulti()
     {
         GreenfootImage img = new GreenfootImage("explosion.png");
         img.scale(sx,sy);
@@ -31,9 +31,9 @@ public class Explosion extends Actor
         counter++;
         if(counter > 50)
         {
-            Actor Rock = getOneIntersectingObject(Rocks.class);
+            Actor BlueDemon = getOneIntersectingObject(BlueDemon.class);
             //System.out.println("removing Rocks Num:" + Rock.getNumber());
-            getWorld().removeObject(Rock);
+            //getWorld().removeObject(Rock);
             getWorld().removeObject(this);
         }
         

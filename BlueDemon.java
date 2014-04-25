@@ -76,7 +76,7 @@ public class BlueDemon extends Actor
                d.setLocation(300,getWorld().getHeight()-20);
 
                getWorld().removeObject(d);
-               getWorld().addObject(new Explosion(), getX(), getY());     
+               getWorld().addObject(new DemonExplosionMulti(), getX(), getY());     
             
 
                if ((image.getHeight() <= 50)) 
@@ -88,7 +88,7 @@ public class BlueDemon extends Actor
             else
             {
                 //Explosion because of hit       
-                getWorld().addObject(new Explosion(), getX(), getY());
+                getWorld().addObject(new DemonExplosionMulti(), getX(), getY());
                 
                 //Change location to random after hit
                 setLocation(50+Greenfoot.getRandomNumber(700), 200+Greenfoot.getRandomNumber(300));

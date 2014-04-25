@@ -16,13 +16,13 @@ public class Level2Label extends Actor
     {
         // Add your action code here.
         Lvl2BkgDesert myWorld = (Lvl2BkgDesert)getWorld();
-        makeImage("Level 2");
+        makeImage("Level 2: DEFEAT YOUR FEAR");
     }
    
     
     private void makeImage(String title)
     {
-        int WIDTH = 180;
+        int WIDTH = 530;
         int HEIGHT = 70;
         int FONT_SIZE = 10;
         GreenfootImage image = new GreenfootImage(WIDTH, HEIGHT);
@@ -33,7 +33,7 @@ public class Level2Label extends Actor
         //Font font = image.getFont();
         //font = font.deriveFont(FONT_SIZE);
         //public Font(String name,int style,int size)
-        Font font = new Font("Segoe UI", Font.BOLD, 40);
+        Font font = new Font("Segoe UI", Font.ITALIC, 40);
         //font = font.deriveFont(FONT_SIZE);
         image.setFont(font);
         image.setColor(Color.WHITE);

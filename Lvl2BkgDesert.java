@@ -54,14 +54,14 @@ public class Lvl2BkgDesert extends World
         addObject(myRocks6, 550 + Greenfoot.getRandomNumber(200), 325 + Greenfoot.getRandomNumber(100));
         //addObject(myRocks4, Greenfoot.getRandomNumber(getWidth()-200)+100, Greenfoot.getRandomNumber(getHeight()-200)+100);
         
-        DemonExplosion demonexplosion = new DemonExplosion();
+       // DemonExplosion demonexplosion = new DemonExplosion();
         
         
         AvailableDarts myAD = new AvailableDarts();
         addObject(myAD, 700, 30);
         
         Level2Label myL2L = new Level2Label();
-        addObject (myL2L, 85, 38);
+        addObject (myL2L, 250, 38);
     }
     public void IncrementDarts(int num)
     {

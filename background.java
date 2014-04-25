@@ -14,7 +14,7 @@ public class background extends World
     //      a = avatar       f = floor           b = brownblock
     //      c = brownblockL  g = Goldcoin        h = Bluecoin
     //      r = Redcoin      d = Brickblock      w = Ghos
-    //      z = Counter      s = Spikyball2      q = Spikyball3
+    //      z = Counter      s = Spikyball2      q = Spider
     //      m = Healthbar    x = SurpriseBox     p = PowerUp
     //      k = key          o = Door
     public void setFields()
@@ -29,7 +29,7 @@ public class background extends World
             "        g      r        ",
             "      ddd  b  ddd       ",
             "                        ",
-            "    q              s    ",
+            "     q             s    ",
             "    gr             rh   ",
             "   ddd            ddd   ",
             "  a                     ",

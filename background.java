@@ -17,6 +17,8 @@ public class background extends base
     //      k = key          o = Door
     public void setFields()
     {
+        counter = new Counter();
+        healthBar = new HealthBar();
         map = new String[] 
         { 
             "               z      m ",
@@ -39,7 +41,9 @@ public class background extends base
 
     public void nextLevel()
     {
-        Greenfoot.setWorld(new background1());
+        background1 bg1 = new background1(counter, healthBar);
+
+        Greenfoot.setWorld(bg1);
     }
 
     // HealthBar healthbar = new HealthBar();

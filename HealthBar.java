@@ -13,6 +13,7 @@ public class HealthBar extends Actor
     int healthBarWidth = 120;
     int healthBarHeight = 75;
     int pixelsPerHealthPoint = (int)healthBarWidth/health;
+    int durationSecs;
     long startTime;
     private int score;
     private int timeRem;
@@ -50,7 +51,7 @@ public class HealthBar extends Actor
         int durationMillis = (int)(currentTime - startTime);  
         // durationMillis is in milliseconds, so you  
         // can convert to seconds/minutes whatever:  
-        int durationSecs = durationMillis / 1000; 
+        durationSecs = durationMillis / 1000; 
         health = totalTime - durationSecs;
     }
     //     public HealthBar()
@@ -62,9 +63,16 @@ public class HealthBar extends Actor
     //     }
     public void addTime(int extra)
     {
-        totalTime += extra;
-       // if(totalTime > healthBarWidth) totalTime = healthBarWidth;
+        if(extra > durationSecs)
+        {
+            totalTime += durationSecs;
+        }
+        else
+        {
+            totalTime += extra;
+        }
         update();
+        
     }
 }     
 

@@ -31,20 +31,6 @@ public class PowerUp extends Actor
             setLocation(Greenfoot.getRandomNumber(800), Greenfoot.getRandomNumber(600));
         }
 
-        //         {
-        //             timer = new Timer(1000, this);
-        //             timer.setInitialDelay(1000);
-        //             timer.start();
-        //         }
-        //         setLocation(Greenfoot.getRandomNumber(800), Greenfoot.getRandomNumber(600));
-        //         
-        //         {
-        //             move(-10);
-        //         }
-        //         else 
-        //         {
-        //             move(0);
-        //         }
     }
 
     public int getFun()
@@ -60,7 +46,7 @@ public class PowerUp extends Actor
         if(isTouching(Avatar.class)) 
         {
             soundapp.play ();
-            timeRem.addTime(100);
+            timeRem.addTime(10);
             return true;
         }
         else 

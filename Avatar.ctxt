@@ -1,6 +1,6 @@
 #BlueJ class context
-comment0.params=pointCounter
-comment0.target=Avatar(Counter)
+comment0.params=pointCounter\ healthBar
+comment0.target=Avatar(Counter,\ HealthBar)
 comment1.params=
 comment1.target=void\ act()
 comment10.params=

@@ -11,6 +11,7 @@ public class Avatar extends Actor
     boolean touchingSpikyBall2 = false;
     boolean touchingSpikyBall3 = false;
     private Counter counter;
+    private HealthBar localHealth;
     private boolean haskey = false;
     private int vSpeed = 0;
     private boolean jumping = false;
@@ -32,9 +33,10 @@ public class Avatar extends Actor
     private int frame = 1;
     private int animationCounter = 0;
 
-    public Avatar(Counter pointCounter)
+    public Avatar(Counter pointCounter, HealthBar healthBar)
     {
         counter = pointCounter;
+        localHealth = healthBar;
     }
     
  //Walking Avatar
@@ -247,7 +249,14 @@ public class Avatar extends Actor
 
     public void exit() // If Player has the key, they can open the door.
     {
-        if (canSee(Door.class) && haskey == true) ((background)getWorld()).nextLevel();
+        if (canSee(Door.class) && haskey == true)
+        {
+            base localbackground;
+           // background1 localbackground1;
+            localbackground = ((base)getWorld());
+            localbackground.nextLevel(counter, localHealth);
+        }
+        
     }
       public boolean canSee(Class clss)
     {

@@ -7,11 +7,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class background1 extends base
 {
-    
-    public background1(Counter counter, HealthBar healthbar)
-    {
-        super(counter,healthbar);
-    }
     /** ********************      MAP LEGEND     *********************** */
     //      a = avatar       f = floor           b = brownblock
     //      c = brownblockL  g = Goldcoin        h = Bluecoin
@@ -38,16 +33,12 @@ public class background1 extends base
             "       h r  g r g g g   ",
             "fffffffffffffffffffffffff" };
     }
-    public void nextLevel()
+    
+      public void nextLevel()
     {
-        background2 bg2 = new background2(counter, healthBar);
-
-        Greenfoot.setWorld(bg2);
-    }
-    public void setCounter(Counter counter, HealthBar healthBar)
-    {
-        this.counter = counter;
-        this.healthBar = healthBar;
+        Greenfoot.setWorld(new background2());
     }
 
 }
+
+

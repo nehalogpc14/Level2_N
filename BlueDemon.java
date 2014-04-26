@@ -164,11 +164,11 @@ public class BlueDemon extends Actor
         switch(direction) {
             case WEST :
                 setDirection(EAST);
-                setImage("RedDemonEast.png");
+                //setImage("RedDemonEast.png");
                 break;
             case EAST :
                 setDirection(WEST);
-                setImage("RedDemon.png");
+               // setImage("RedDemon.png");
                 break;
         }
     }

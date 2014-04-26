@@ -81,7 +81,7 @@ public class BlueDemon extends Actor
 
                if ((image.getHeight() <= 50)) 
             {
-               getWorld().addObject(new DemonExplosion(), getWorld().getWidth()/2, getWorld().getHeight()/2);
+               getWorld().addObject(new Congratulation(), getWorld().getWidth()/2, getWorld().getHeight()/2);
                GameOver = true;
                getWorld().removeObject(this);
             }
@@ -164,9 +164,11 @@ public class BlueDemon extends Actor
         switch(direction) {
             case WEST :
                 setDirection(EAST);
+                setImage("RedDemonEast.png");
                 break;
             case EAST :
                 setDirection(WEST);
+                setImage("RedDemon.png");
                 break;
         }
     }

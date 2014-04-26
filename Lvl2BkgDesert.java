@@ -62,6 +62,9 @@ public class Lvl2BkgDesert extends World
         
         Level2Label myL2L = new Level2Label();
         addObject (myL2L, 250, 38);
+
+        Congratulation congrats = new Congratulation();
+
     }
     public void IncrementDarts(int num)
     {

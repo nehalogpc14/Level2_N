@@ -15,10 +15,10 @@ public class base extends World
     {    
 
         super(800, 500, 1);  
-//         counter = new Counter();
-//         healthBar = new HealthBar();
+        //         counter = new Counter();
+    //         healthBar = new HealthBar();
         setFields();
-        prepare();
+        
         for (int i=0; i<map.length; i++) for (int j=0; j<map[i].length(); j++)
             {
 
@@ -54,7 +54,6 @@ public class base extends World
         this.counter = counter;
         this.healthBar = healthbar;
         setFields();
-        prepare();
         
         for (int i=0; i<map.length; i++) for (int j=0; j<map[i].length(); j++)
             {
@@ -95,14 +94,5 @@ public class base extends World
         return null;
     }
 
-    private void prepare()
-    {
-
-        SurpriseBox surpriseBox = new SurpriseBox(counter);
-        addObject (surpriseBox, 400, 400);
-
-        PowerUp powerUp = new PowerUp(healthBar);
-        addObject(powerUp, 300, 323);
-
-    }
+    
 }

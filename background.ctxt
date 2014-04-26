@@ -4,4 +4,6 @@ comment0.target=void\ setFields()
 comment0.text=MAP\ LEGEND\ \ \ \ \ ***********************
 comment1.params=
 comment1.target=void\ nextLevel()
-numComments=2
+comment2.params=
+comment2.target=void\ prepare()
+numComments=3

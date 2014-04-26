@@ -27,7 +27,7 @@ public class PowerUp extends Actor
         if(foundAvatar())
         {
             int delta = getFun();
-            timeRem.updateTimeRem(delta);
+            timeRem.addTime(delta);
             setLocation(Greenfoot.getRandomNumber(800), Greenfoot.getRandomNumber(600));
         }
 
@@ -56,10 +56,11 @@ public class PowerUp extends Actor
 
     public boolean foundAvatar()
     {
-//         Actor Avatar = getOneObjectAtOffset(0, 0, Avatar.class);
+     //  Actor Avatar = getOneObjectAtOffset(0, 0, Avatar.class);
         if(isTouching(Avatar.class)) 
         {
             soundapp.play ();
+            timeRem.addTime(100);
             return true;
         }
         else 

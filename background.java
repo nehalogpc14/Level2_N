@@ -7,8 +7,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class background extends World
 {
-    //timeRem timeRem;
     Counter counter;
+    HealthBar healthBar;
     String[] map;
 
     /** ********************      MAP LEGEND     *********************** */
@@ -20,7 +20,9 @@ public class background extends World
     //      k = key          o = Door
     public void setFields()
     {
-        map = new String[] { "               z      m ",
+        map = new String[] 
+        { 
+            "               z      m ",
             "  o                     ",
             " ddd       p            ",
             "        grrwrkg         ",
@@ -48,8 +50,8 @@ public class background extends World
         super(800, 500, 1); 
 
         setFields();
-        timeRem = new TimeRem();
         counter = new Counter();
+        healthBar = new HealthBar();
         prepare();
         //PointsBar pb = new PointsBar();
 
@@ -71,7 +73,7 @@ public class background extends World
                 if (kind == 9) actor = counter;
                 if (kind == 10)actor = new Spikyball2();
                 if (kind == 11)actor = new Spikyball3();
-                if (kind == 12)actor = new HealthBar();
+                if (kind == 12)actor = healthBar;
                 if (kind == 13)actor = new Key();
                 if (kind == 14)actor = new Door();
                 // if (kind == 13) actor = new PowerUp();
@@ -80,13 +82,14 @@ public class background extends World
                 addObject(actor, 16+j*32, 16+i*32);
         }
     }
-     public void nextLevel()
+
+    public void nextLevel()
     {
         Greenfoot.setWorld(new background1());
     }
 
     // HealthBar healthbar = new HealthBar();
-    
+
     public HealthBar getHealthBar()
     {
         //return healthbar;
@@ -95,14 +98,14 @@ public class background extends World
 
     private void prepare()
     {
-//         PointsBar pointsbar = new PointsBar();
-//         addObject(pointsbar, 33, 29);
-//         pointsbar.setLocation(112, 18);
+        //         PointsBar pointsbar = new PointsBar();
+        //         addObject(pointsbar, 33, 29);
+        //         pointsbar.setLocation(112, 18);
 
         SurpriseBox surpriseBox = new SurpriseBox(counter);
         addObject (surpriseBox, 400, 400);
 
-        PowerUp powerUp = new PowerUp(timeRem);
+        PowerUp powerUp = new PowerUp(healthBar);
         addObject(powerUp, 300, 323);
 
     }

@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class background1 extends World
 {
     Counter counter;
+    HealthBar healthBar;
     String[] map;
 
     /** ********************      MAP LEGEND     *********************** */
@@ -48,8 +49,9 @@ public class background1 extends World
 
         setFields();
         counter = new Counter();
+        healthBar = new HealthBar(); 
         prepare();
-        //PointsBar pb = new PointsBar();
+        //TimeRem = new timeRem();
 
         for (int i=0; i<map.length; i++) for (int j=0; j<map[i].length(); j++)
             {
@@ -79,7 +81,7 @@ public class background1 extends World
         }
     }
     // HealthBar healthbar = new HealthBar();
-    
+
     public HealthBar getHealthBar()
     {
         //return healthbar;
@@ -88,14 +90,14 @@ public class background1 extends World
 
     private void prepare()
     {
-//         PointsBar pointsbar = new PointsBar();
-//         addObject(pointsbar, 33, 29);
-//         pointsbar.setLocation(112, 18);
+        //         PointsBar pointsbar = new PointsBar();
+        //         addObject(pointsbar, 33, 29);
+        //         pointsbar.setLocation(112, 18);
 
         SurpriseBox surpriseBox = new SurpriseBox(counter);
         addObject (surpriseBox, 400, 400);
 
-        PowerUp powerUp = new PowerUp(timeRem);
+        PowerUp powerUp = new PowerUp(healthBar);
         addObject(powerUp, 300, 323);
 
     }

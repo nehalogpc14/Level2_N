@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.params=tr
-comment0.target=PowerUp(PointsBar)
+comment0.target=PowerUp(HealthBar)
 comment1.params=
 comment1.target=void\ act()
 comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ SurpriseBox\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n

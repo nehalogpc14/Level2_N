@@ -9,7 +9,7 @@ import java.awt.Color;
 public class HealthBar extends Actor
 {
     int health = 120;
-    int totalTime = 120;
+    int totalTime;
     int healthBarWidth = 120;
     int healthBarHeight = 75;
     int pixelsPerHealthPoint = (int)healthBarWidth/health;
@@ -24,18 +24,19 @@ public class HealthBar extends Actor
     public HealthBar()
     {
         startTime = System.currentTimeMillis();  
+        totalTime = 120;
         score = 0;
         timeRem = 60;
         setImage (new GreenfootImage(200, 30));
         update();
     }
-    
+
     public void act() 
     {
         update();
         //updateTimeRem(-1);
     }    
-    
+
     public void update()
     {
         setImage(new GreenfootImage(healthBarWidth + 2, healthBarHeight + 2));
@@ -52,20 +53,19 @@ public class HealthBar extends Actor
         int durationSecs = durationMillis / 1000; 
         health = totalTime - durationSecs;
     }
-//     public HealthBar()
-//     {
-//         score = 0;
-//         totalTime = 120;
-//         setImage (new GreenfootImage(200, 30));
-//         update();
-//     }
-    public int updateTimeRem(int delta)
+    //     public HealthBar()
+    //     {
+    //         score = 0;
+    //         totalTime = 120;
+    //         setImage (new GreenfootImage(200, 30));
+    //         update();
+    //     }
+    public void addTime(int extra)
     {
-        timeRem += delta;
+        totalTime += extra;
+       // if(totalTime > healthBarWidth) totalTime = healthBarWidth;
         update();
-        return timeRem;
     }
-    }     
-
+}     
 
 

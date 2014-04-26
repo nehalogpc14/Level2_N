@@ -7,7 +7,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class background2 extends base
 {
-
+    public background2(Counter counter, HealthBar healthbar)
+    {
+        super(counter,healthbar);
+    }
     /** ********************      MAP LEGEND     *********************** */
     //      a = avatar       f = floor           b = brownblock
     //      c = brownblockL  g = Goldcoin        h = Bluecoin

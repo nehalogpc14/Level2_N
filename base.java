@@ -15,8 +15,8 @@ public class base extends World
     {    
 
         super(800, 500, 1);  
-        counter = new Counter();
-        healthBar = new HealthBar();
+//         counter = new Counter();
+//         healthBar = new HealthBar();
         setFields();
         prepare();
         for (int i=0; i<map.length; i++) for (int j=0; j<map[i].length(); j++)
@@ -46,6 +46,43 @@ public class base extends World
                 addObject(actor, 16+j*32, 16+i*32);
         }
 
+    }
+    
+    public base(Counter counter, HealthBar healthbar)
+    {
+        super(800, 500, 1);  
+        this.counter = counter;
+        this.healthBar = healthbar;
+        setFields();
+        prepare();
+        
+        for (int i=0; i<map.length; i++) for (int j=0; j<map[i].length(); j++)
+            {
+
+                int kind = "afbcghrdwzsqmko".indexOf(""+map[i].charAt(j));
+                if (kind < 0) continue;
+                Actor actor = null;
+                if (kind == 0) actor = new Avatar(counter, healthBar);
+                if (kind == 1) actor = new Floor();
+                if (kind == 2) actor = new brownblock();
+                if (kind == 3) actor = new brownblockL();
+                if (kind == 4) actor = new Goldcoin();
+                if (kind == 5) actor = new Bluecoin();
+                if (kind == 6) actor = new Redcoin();
+                if (kind == 7) actor = new Brickblock();
+                if (kind == 8) actor = new Ghost();
+                if (kind == 9) actor = counter;
+                if (kind == 10)actor = new Spikyball2();
+                if (kind == 11)actor = new Spikyball3();
+                if (kind == 12)actor = healthBar;
+                if (kind == 13)actor = new Key();
+                if (kind == 14)actor = new Door();
+                // if (kind == 13) actor = new PowerUp();
+                //   if (kind == 13) actor = new SurpriseBox(PointsBar pb);
+                //   if (kind == 14) actor = new PointsBar();
+                addObject(actor, 16+j*32, 16+i*32);
+        }
+        
     }
 
     public void setFields() {}

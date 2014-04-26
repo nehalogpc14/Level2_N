@@ -9,11 +9,11 @@ import java.lang.*;
  */
 public class PowerUp extends Actor
 {
-    PointsBar timeRem;
+    HealthBar timeRem;
     private GreenfootSound soundapp = new GreenfootSound("applause.wav");
     //     private Timer timer;
 
-    public PowerUp(PointsBar tr)
+    public PowerUp(HealthBar tr)
     {
         timeRem = tr;
     }

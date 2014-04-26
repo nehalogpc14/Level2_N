@@ -6,4 +6,6 @@ comment1.params=
 comment1.target=void\ act()
 comment2.params=
 comment2.target=void\ update()
-numComments=3
+comment3.params=delta
+comment3.target=int\ updateTimeRem(int)
+numComments=4

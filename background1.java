@@ -21,19 +21,19 @@ public class background1 extends World
     {
         map = new String[] { "               z      m ",
             "                        ",
+            "   o                    ",
+            "  ddd                   ",
             "                        ",
-            "                q       ",
-            "              rgrrg     ",
-            " b          ddddddd     ",
-            "          dddddd        ",
-            "   w                    ",
-            "  hgg              gg   ",
-            " ddddd  c         ddd   ",
-            "               rrrh     ",
-            "             dddddd     ",
+            "                        ",
+            "                        ",
+            "                        ",
+            "                        ",
+            "                        ",
+            "                        ",
+            "                        ",
             "                        ",
             "   a                    ",
-            "      rgrhrgrhrg        ",
+            "                        ",
             "fffffffffffffffffffffffff" };
     }
 
@@ -88,14 +88,14 @@ public class background1 extends World
 
     private void prepare()
     {
-        PointsBar pointsbar = new PointsBar();
-        addObject(pointsbar, 33, 29);
-        pointsbar.setLocation(112, 18);
+//         PointsBar pointsbar = new PointsBar();
+//         addObject(pointsbar, 33, 29);
+//         pointsbar.setLocation(112, 18);
 
         SurpriseBox surpriseBox = new SurpriseBox(counter);
         addObject (surpriseBox, 400, 400);
 
-        PowerUp powerUp = new PowerUp(pointsbar);
+        PowerUp powerUp = new PowerUp(timeRem);
         addObject(powerUp, 300, 323);
 
     }

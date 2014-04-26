@@ -7,6 +7,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class background extends World
 {
+    //timeRem timeRem;
     Counter counter;
     String[] map;
 
@@ -29,8 +30,8 @@ public class background extends World
             "        g      r        ",
             "      ddd  b  ddd       ",
             "                        ",
-            "     q             s    ",
-            "    gr             rh   ",
+            "     q            s     ",
+            "    gr            rh    ",
             "   ddd            ddd   ",
             "  a                     ",
             "        g r   r  g      ",
@@ -47,6 +48,7 @@ public class background extends World
         super(800, 500, 1); 
 
         setFields();
+        timeRem = new TimeRem();
         counter = new Counter();
         prepare();
         //PointsBar pb = new PointsBar();
@@ -93,14 +95,14 @@ public class background extends World
 
     private void prepare()
     {
-        PointsBar pointsbar = new PointsBar();
-        addObject(pointsbar, 33, 29);
-        pointsbar.setLocation(112, 18);
+//         PointsBar pointsbar = new PointsBar();
+//         addObject(pointsbar, 33, 29);
+//         pointsbar.setLocation(112, 18);
 
         SurpriseBox surpriseBox = new SurpriseBox(counter);
         addObject (surpriseBox, 400, 400);
 
-        PowerUp powerUp = new PowerUp(pointsbar);
+        PowerUp powerUp = new PowerUp(timeRem);
         addObject(powerUp, 300, 323);
 
     }

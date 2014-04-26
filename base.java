@@ -49,7 +49,7 @@ public class base extends World
 
     public void setFields() {}
 
-    public void nextLevel(Counter counter, HealthBar healthBar) {}
+    public void nextLevel() {}
     
     public HealthBar getHealthBar()
     {

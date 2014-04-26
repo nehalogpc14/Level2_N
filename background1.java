@@ -34,7 +34,7 @@ public class background1 extends base
             "fffffffffffffffffffffffff" };
     }
     
-      public void nextLevel(Counter counter, HealthBar healtBar)
+      public void nextLevel()
     {
         Greenfoot.setWorld(new background2());
     }

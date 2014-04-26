@@ -254,7 +254,7 @@ public class Avatar extends Actor
             base localbackground;
            // background1 localbackground1;
             localbackground = ((base)getWorld());
-            localbackground.nextLevel(counter, localHealth);
+            localbackground.nextLevel();
         }
         
     }

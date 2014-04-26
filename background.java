@@ -7,9 +7,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class background extends base
 {
-    Counter counter;
-    HealthBar healthBar;
-   // String[] map;
 
     /** ********************      MAP LEGEND     *********************** */
     //      a = avatar       f = floor           b = brownblock
@@ -40,7 +37,7 @@ public class background extends base
             "fffffffffffffffffffffffff" };
     }
 
-    public void nextLevel(Counter counter, HealthBar healtBar)
+    public void nextLevel()
     {
         Greenfoot.setWorld(new background1());
     }

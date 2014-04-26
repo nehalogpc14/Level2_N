@@ -18,6 +18,7 @@ public class base extends World
         counter = new Counter();
         healthBar = new HealthBar();
         setFields();
+        prepare();
         for (int i=0; i<map.length; i++) for (int j=0; j<map[i].length(); j++)
             {
 

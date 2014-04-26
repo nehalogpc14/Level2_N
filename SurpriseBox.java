@@ -16,6 +16,7 @@ public class SurpriseBox extends Actor
     private GreenfootImage close = new GreenfootImage("closedbox.png");
     private GreenfootImage plus10 = new GreenfootImage("10plus.png");
     private GreenfootImage minus10 = new GreenfootImage("10minus.png");
+    private GreenfootImage plus20 = new GreenfootImage("20plus.png");
     int timer;
     int delta = 0;
 
@@ -54,7 +55,8 @@ public class SurpriseBox extends Actor
             }
             else
             {
-                setImage(minus10);
+                 setImage(plus20);
+                
             }
             counter.add(delta);
 
@@ -74,12 +76,12 @@ public class SurpriseBox extends Actor
         if (d < 1)
         {
             soundno.play ();
-            return -10;
+            return 10;
         }
         else 
         { 
             soundapp.play ();
-            return 10;
+            return 20;
         }
 
     }

@@ -249,7 +249,7 @@ public class Avatar extends Actor
 
     public void exit() // If Player has the key, they can open the door.
     {
-        if (canSee(Door.class) && haskey == true)
+        if ((canSee(Door.class) && haskey == true)|| localHealth.TimeLeft < 1)
         {
             base localbackground;
            // background1 localbackground1;

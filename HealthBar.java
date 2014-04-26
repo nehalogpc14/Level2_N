@@ -17,6 +17,7 @@ public class HealthBar extends Actor
     long startTime;
     private int score;
     private int timeRem;
+    public int TimeLeft = 120;
     int timer;
     /**
      * Act - do whatever the HealthBar wants to do. This method is called whenever
@@ -53,6 +54,7 @@ public class HealthBar extends Actor
         // can convert to seconds/minutes whatever:  
         durationSecs = durationMillis / 1000; 
         health = totalTime - durationSecs;
+        TimeLeft = health;
     }
     //     public HealthBar()
     //     {

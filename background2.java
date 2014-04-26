@@ -39,6 +39,6 @@ public class background2 extends base
     }
     public void nextLevel()
     {
-        //Greenfoot.setWorld(new background1());
+        Greenfoot.setWorld(new Lvl2BkgDesert());
     }
 }

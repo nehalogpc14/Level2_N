@@ -14,7 +14,7 @@ public class DemonExplosionMulti extends Actor
     
     public DemonExplosionMulti()
     {
-        GreenfootImage img = new GreenfootImage("explosion.png");
+        GreenfootImage img = new GreenfootImage();
         img.scale(sx,sy);
         setImage(img);
     }

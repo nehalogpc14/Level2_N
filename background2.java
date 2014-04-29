@@ -20,22 +20,25 @@ public class background2 extends base
     //      k = key          o = Door
     public void setFields()
     {
-        map = new String[] { "               z      m ",
+        map = new String[] 
+        { 
+            "               z      m ",
+            "  q rrrhrrrr     rrr    ",
+            "  dddddddddd    ddddd   ",
+            "                        ",
+            "   b        dddd        ",
             "                        ",
             "                        ",
-            "  ddd          grhr     ",
-            "              ddddd     ",
-            "       b                ",
+            "  c         rgh         ",
+            "  gr                    ",
+            "  ddd             rh    ",
+            "                 dddd   ",
+            "    rr                  ",
+            "   dddd      b          ",
             "                        ",
-            "  g q g                 ",
-            "  ddddd      c          ",
-            "                        ",
-            "      rh                ",
-            "     dddd         w     ",
-            "                dgggg   ",
-            "   a            ddddd   ",
-            "       h r  g r g g g   ",
-            "fffffffffffffffffffffffff" };
+            " w  rh a   ggg      w   ",
+            "fffffffffffffffffffffffff" 
+        };
     }
     public void nextLevel()
     {

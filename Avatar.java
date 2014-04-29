@@ -15,7 +15,7 @@ public class Avatar extends Actor
     private boolean haskey = false;
     private int vSpeed = 0;
     private boolean jumping = false;
-    private int jumpheight = 16;
+    private int jumpheight = 14;
     private int fallspeed = 1;
     private int Coinscollected;
     private boolean GhostBelow = false;
@@ -284,7 +284,7 @@ public class Avatar extends Actor
             if(SpikyballBelow == false)
             {
                 counter.add(-1);
-                Greenfoot.playSound("explosion.wav");
+                Greenfoot.playSound("Ghosthit.wav");
                 SpikyballBelow = true;
             }
         }
@@ -298,7 +298,7 @@ public class Avatar extends Actor
             if(SpiderBelow == false)
             {
                 counter.add(-1);
-                Greenfoot.playSound("explosion.wav");
+                Greenfoot.playSound("Ghosthit.wav");
                SpiderBelow = true;
             }
         }

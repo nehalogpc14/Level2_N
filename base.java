@@ -15,8 +15,7 @@ public class base extends World
     {    
 
         super(800, 500, 1);  
-        //         counter = new Counter();
-    //         healthBar = new HealthBar();
+        Greenfoot.playSound("Lvl2Music.mp3");
         setFields();
         
         for (int i=0; i<map.length; i++) for (int j=0; j<map[i].length(); j++)

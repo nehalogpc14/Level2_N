@@ -22,6 +22,11 @@ public class Launcher extends Mover
         GreenfootImage img = getImage();
         setImage(img);
         
+        Lvl2BkgDesert lvl2 = (Lvl2BkgDesert) getWorld(); 
+        if (lvl2.GetAvailDarts() <= 0)
+        {
+            return;
+        }
         
         shootdelay++;
         //if(Greenfoot.isKeyDown( "up"))

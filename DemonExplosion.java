@@ -17,6 +17,7 @@ public class DemonExplosion extends BlueDemon
     public void act() 
     {
         // Add your action code here.
+        Greenfoot.playSound("chime.wav");
         GreenfootImage image = getImage(); 
         image.scale(300,300);
         setImage(image);
@@ -30,6 +31,7 @@ public class DemonExplosion extends BlueDemon
         setImage(image);
         image.scale(700,700);
         setImage(image);
+        
         
         if (GameOver = true)
         {

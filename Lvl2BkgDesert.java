@@ -11,6 +11,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Lvl2BkgDesert extends World
 {
     public int AvailDarts = 100;
+    private GreenfootSound music = new GreenfootSound("Lvl2Music.mp3");  
     
     /**
      * Constructor for objects of class Lvl2BkgDesert.
@@ -20,7 +21,8 @@ public class Lvl2BkgDesert extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(800, 600, 1); 
-        Greenfoot.playSound("Lvl2Music.mp3");
+        //Greenfoot.playSound("Lvl2Music.mp3");
+  
          //Create the demon object
         BlueDemon bluedemon = new BlueDemon();
         
@@ -79,4 +81,14 @@ public class Lvl2BkgDesert extends World
     {
         return AvailDarts;
     }
+    
+    public void started()  
+    {  
+        music.playLoop();  
+    }  
+      
+    public void stopped()  
+    {  
+        music.stop();  
+    }  
 }

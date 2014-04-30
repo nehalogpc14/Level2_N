@@ -43,9 +43,15 @@ public class Rocks extends Actor
         Lvl2BkgDesert myWorld = (Lvl2BkgDesert)getWorld();
         count++;
         //Detects when the dart hits the rock. When it does, the action follows.
-        //List mylist = getObjectsInRange(10,Darts.class);
-        Actor Darts = getOneObjectAtOffset(0, 0, Darts.class);        
+        List<Actor> mylist = (List<Actor>) getObjectsInRange(60,Darts.class);
+        //Actor Darts = getOneObjectAtOffset(0, 0, Darts.class);        
         //Actor Darts=getOneIntersectingObject(Darts.class);
+        if (mylist.isEmpty())
+        {
+            return;
+        }
+        
+        Actor Darts = getOneIntersectingObject(Darts.class);
         
         if(Darts!=null)
         {
@@ -59,6 +65,7 @@ public class Rocks extends Actor
             else
             {
                 myWorld.DecrememntDarts(3);
+                Greenfoot.playSound("explosion.wav");
             }
         }
         //Detects when explodes

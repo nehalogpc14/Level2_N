@@ -17,7 +17,7 @@ public class base extends World
         super(800, 500, 1);  
         Greenfoot.playSound("Lvl2Music.mp3");
         setFields();
-        
+
         for (int i=0; i<map.length; i++) for (int j=0; j<map[i].length(); j++)
             {
 
@@ -43,17 +43,17 @@ public class base extends World
                 //   if (kind == 13) actor = new SurpriseBox(PointsBar pb);
                 //   if (kind == 14) actor = new PointsBar();
                 addObject(actor, 16+j*32, 16+i*32);
-        }
-
+        } 
+        prepare();
     }
-    
+
     public base(Counter counter, HealthBar healthbar)
     {
         super(800, 500, 1);  
         this.counter = counter;
         this.healthBar = healthbar;
         setFields();
-        
+
         for (int i=0; i<map.length; i++) for (int j=0; j<map[i].length(); j++)
             {
 
@@ -80,18 +80,28 @@ public class base extends World
                 //   if (kind == 14) actor = new PointsBar();
                 addObject(actor, 16+j*32, 16+i*32);
         }
-        
+
     }
 
     public void setFields() {}
 
     public void nextLevel() {}
-    
+
     public HealthBar getHealthBar()
     {
         //return healthbar;
         return null;
     }
 
-    
+    private void prepare()
+    {
+
+        SurpriseBox surpriseBox = new SurpriseBox(counter);
+        addObject (surpriseBox, 400, 400);
+
+        PowerUp powerUp = new PowerUp(healthBar);
+        addObject(powerUp, 300, 323);
+
+    }
+
 }

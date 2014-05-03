@@ -55,36 +55,43 @@ public class SurpriseBox extends Actor
             }
             else
             {
-                 setImage(plus20);
-                
+                setImage(plus20);
+
             }
             counter.add(delta);
 
         }
 
-        if (timer == 40)
+        if (timer == 45)
         {
-            getWorld().removeObject(this);
+            setImage(close);
+            //getWorld().removeObject(this);
             // timer++;
             // delta = 0;
         }
-    }
 
-    public int getFun()
-    {
-        int d = Greenfoot.getRandomNumber(2);
-        if (d < 1)
+        if (timer == 65)
         {
-            soundno.play ();
-            return 10;
+            setLocation(Greenfoot.getRandomNumber(800), Greenfoot.getRandomNumber(600));
         }
-        else 
-        { 
-            soundapp.play ();
-            return 20;
-        }
+    }       
+      
+    public int getFun()
+        {
+            int d = Greenfoot.getRandomNumber(2);
+            if (d < 1)
+            {
+                soundno.play ();
+                return 10;
+            }
+            else 
+            { 
+                soundapp.play ();
+                return 20;
+            }
 
-    }
+        }
+    
 
     public boolean foundAvatar()
     {

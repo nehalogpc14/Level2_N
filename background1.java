@@ -37,6 +37,8 @@ public class background1 extends base
             "   a            ddddd k ",
             "       h r  g r g g g   ",
             "fffffffffffffffffffffffff" };
+            
+            prepare();
     }
     public void nextLevel()
     {
@@ -50,4 +52,14 @@ public class background1 extends base
         this.healthBar = healthBar;
     }
 
+       private void prepare()
+    {
+
+        SurpriseBox surpriseBox = new SurpriseBox(counter);
+        addObject (surpriseBox, 400, 400);
+
+        PowerUp powerUp = new PowerUp(healthBar);
+        addObject(powerUp, 300, 323);
+
+    }
 }

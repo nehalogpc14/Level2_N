@@ -7,7 +7,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class background extends base
 {
-
     /** ********************      MAP LEGEND     *********************** */
     //      a = avatar       f = floor           b = brownblock
     //      c = brownblockL  g = Goldcoin        h = Bluecoin
@@ -20,7 +19,7 @@ public class background extends base
         counter = new Counter();
         healthBar = new HealthBar();
         map = new String[] 
-       //prepare();
+       
         { 
             "               z      m ",
             "  o                     ",
@@ -46,6 +45,7 @@ public class background extends base
 
         Greenfoot.setWorld(bg1);
     }
+    
     private void prepare()
     {
 

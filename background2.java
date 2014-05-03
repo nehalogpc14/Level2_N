@@ -11,6 +11,7 @@ public class background2 extends base
     {
         super(counter,healthbar);
     }
+
     /** ********************      MAP LEGEND     *********************** */
     //      a = avatar       f = floor           b = brownblock
     //      c = brownblockL  g = Goldcoin        h = Bluecoin
@@ -39,9 +40,23 @@ public class background2 extends base
             " w  rh a   ggg      w   ",
             "fffffffffffffffffffffffff" 
         };
+        prepare();
     }
+
     public void nextLevel()
     {
         Greenfoot.setWorld(new Lvl2BkgDesert(counter.getValue()));
     }
+
+    private void prepare()
+    {
+
+        SurpriseBox surpriseBox = new SurpriseBox(counter);
+        addObject (surpriseBox, 400, 400);
+
+        PowerUp powerUp = new PowerUp(healthBar);
+        addObject(powerUp, 300, 323);
+
+    }
 }
+

@@ -18,7 +18,7 @@ public class Counter extends Actor
     /**
      * Create a new counter, initialised to 0.
      */
-    
+
     public Counter()
     {
         background = getImage();  // get image from class
@@ -26,20 +26,17 @@ public class Counter extends Actor
         target = 50;
         updateImage();
     }
-    
+
     ///**
-     //* Animate the display to count up (or down) to the current target value.
-     //*/
+    //* Animate the display to count up (or down) to the current target value.
+    //*/
     public void act() 
     {
-        //if (value < target) {
-           // value++;
-            updateImage();
-        //}
-       // else if (value > target) {
-            //value--;
-            //updateImage();
-        //}
+        if(Greenfoot.mouseClicked(this))  
+        {   
+            value += 10;
+        }
+        updateImage();
     }
 
     /**
@@ -58,7 +55,6 @@ public class Counter extends Actor
         return value;
     }
 
-   
     /**
      * Update the image on screen to show the current value.
      */
@@ -67,7 +63,7 @@ public class Counter extends Actor
         GreenfootImage image = new GreenfootImage(background);
         GreenfootImage text = new GreenfootImage("" + value, 22, Color.BLACK, transparent);
         image.drawImage(text, (image.getWidth()-text.getWidth())/2, 
-                        (image.getHeight()-text.getHeight())/2);
+            (image.getHeight()-text.getHeight())/2);
         setImage(image);
     }
 }

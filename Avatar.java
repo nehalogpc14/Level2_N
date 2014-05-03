@@ -62,7 +62,7 @@ public class Avatar extends Actor
             //direction = -1;
             moveLeft();
         }
-        if(Greenfoot.isKeyDown("up") && jumping == false)
+        if((Greenfoot.isKeyDown("up") || Greenfoot.isKeyDown("space"))&& jumping == false)
         {
             jump();
         }

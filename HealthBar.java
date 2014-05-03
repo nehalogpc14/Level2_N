@@ -11,7 +11,7 @@ public class HealthBar extends Actor
     int health = 120;
     int totalTime;
     int healthBarWidth = 120;
-    int healthBarHeight = 75;
+    int healthBarHeight = 30;
     int pixelsPerHealthPoint = (int)healthBarWidth/health;
     int durationSecs;
     long startTime;
@@ -37,7 +37,6 @@ public class HealthBar extends Actor
     public void act() 
     {
         update();
-        //updateTimeRem(-1);
     }    
 
     public void update()
@@ -47,6 +46,15 @@ public class HealthBar extends Actor
         myImage.setColor(Color.WHITE);
         myImage.drawRect(0, 0, healthBarWidth + 1, healthBarHeight + 1);
         myImage.setColor(Color.GREEN);
+        if (TimeLeft < totalTime/2)
+        {
+            myImage.setColor(Color.YELLOW);
+        }
+        
+        if (TimeLeft < totalTime/4)
+        {
+            myImage.setColor(Color.RED);
+        }
         myImage.fillRect(1, 1, health*pixelsPerHealthPoint, healthBarHeight);
         // Later (for example in an act() method), do:  
         long currentTime = System.currentTimeMillis();  
@@ -57,13 +65,7 @@ public class HealthBar extends Actor
         health = totalTime - durationSecs;
         TimeLeft = health;
     }
-    //     public HealthBar()
-    //     {
-    //         score = 0;
-    //         totalTime = 120;
-    //         setImage (new GreenfootImage(200, 30));
-    //         update();
-    //     }
+
     public void addTime(int extra)
     {
         if(extra > durationSecs)
@@ -75,8 +77,7 @@ public class HealthBar extends Actor
             totalTime += extra;
         }
         update();
-        
+
     }
 }     
-
 

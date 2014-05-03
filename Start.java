@@ -18,6 +18,11 @@ public class Start extends Actor
         {   
            background bg = new background(); 
            Greenfoot.setWorld(bg);
-        }  
+        }
+        
+        if(Greenfoot.isKeyDown("shift") && Greenfoot.isKeyDown("F9"))
+        {
+            Greenfoot.setWorld(new Lvl2BkgDesert());
+        }
     }    
 }

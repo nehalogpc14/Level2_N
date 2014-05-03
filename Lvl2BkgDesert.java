@@ -11,8 +11,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Lvl2BkgDesert extends World
 {
     public int AvailDarts = 100;
-    
-    
+    private GreenfootSound music = new GreenfootSound("Lvl2Music.mp3");      
     /**
      * Constructor for objects of class Lvl2BkgDesert.
      * 
@@ -86,4 +85,13 @@ public class Lvl2BkgDesert extends World
     {
         return AvailDarts;
     }
+        public void started()  
+    {  
+        music.playLoop();  
+    }  
+      
+    public void stopped()  
+    {  
+        music.stop();  
+    } 
 }

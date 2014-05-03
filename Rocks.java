@@ -60,14 +60,14 @@ public class Rocks extends Actor
             getWorld().removeObject(Darts);
             if(colorchanged)
             {
-                Greenfoot.playSound("explosion.wav");
+                Greenfoot.playSound("OrangeCacti.wav");
                 shotstaken++;
                 myWorld.DecrememntDarts(1);
             }
             else
             {
                 myWorld.DecrememntDarts(3);
-                Greenfoot.playSound("explosion.wav");
+                Greenfoot.playSound("greencactus.wav");                
             }
         }
         //Detects when explodes

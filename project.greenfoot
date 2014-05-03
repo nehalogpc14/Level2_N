@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Sat May 03 13:49:52 PDT 2014
+#Sat May 03 15:16:05 PDT 2014
 class.Mover.superclass=greenfoot.Actor
 target24.type=ClassTarget
 target16.name=Floor
@@ -419,6 +419,7 @@ target1.editor.y=20
 target1.editor.x=40
 dependency38.from=background2
 target4.naviview.expanded=false
+class.Instructionslvl1.image=instructionslvl2.png
 dependency105.to=Lvl2BkgDesert
 simulation.speed=50
 target8.editor.height=700
@@ -460,7 +461,7 @@ dependency100.to=Darts
 target18.y=370
 target18.x=10
 target12.height=50
-class.Instructions.image=Instructions.PNG
+class.Instructions.image=instructionlvl1.PNG
 class.PointsBar.superclass=greenfoot.Actor
 dependency13.type=UsesDependency
 dependency21.to=Counter
@@ -577,6 +578,7 @@ dependency34.to=Door
 dependency5.from=background
 target34.width=80
 class.Darts.superclass=Mover
+class.Next.image=next.png
 target39.editor.height=700
 dependency107.to=Rocks
 dependency28.type=UsesDependency
@@ -753,6 +755,7 @@ dependency32.type=UsesDependency
 target8.width=80
 dependency109.to=Launcher
 dependency84.type=UsesDependency
+class.Instructionslvl1.superclass=greenfoot.World
 dependency83.to=Spikyball2
 target39.name=Key
 target22.type=ClassTarget
@@ -903,6 +906,7 @@ dependency50.to=Spikyball3
 target1.naviview.expanded=false
 target11.naviview.expanded=false
 class.Brickblock.image=Brick.png
+class.Next.superclass=greenfoot.Actor
 dependency9.from=background
 target1.y=910
 target1.x=10

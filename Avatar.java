@@ -208,7 +208,7 @@ public class Avatar extends Actor
         if(Coinscollected()) 
         {
             getCoin();
-            counter.add(1);
+            counter.add(2);
             Greenfoot.playSound("Coin.wav");
         }
     }

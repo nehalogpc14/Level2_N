@@ -18,7 +18,7 @@ public class Instructions extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(800, 500, 1); 
         
-        Start startButton = new Start();
-        addObject (startButton, 400, 480);
+        Next nextButton = new Next();
+        addObject (nextButton, 400, 480);
     }
 }

@@ -155,19 +155,30 @@ public class BlueDemon extends Actor
     /**
      * Turns towards the left.
      */
-    public void turnWest()
+
+          public void turnWest()
     {
+        int imageWidth = getImage().getWidth();
+        int imageHeight = getImage().getHeight();
+        
+        //private int yscale;
+        
         switch(direction) {
             case WEST :
                 setDirection(EAST);
-                //setImage("RedDemonEast.png");
+                setImage("RedDemonEast.png");
                 break;
             case EAST :
                 setDirection(WEST);
-               // setImage("RedDemon.png");
+                setImage("RedDemon.png");
                 break;
         }
+        // set demon size to current size
+        GreenfootImage demonImage = getImage();
+        demonImage.scale(imageWidth, imageHeight);
+        setImage(demonImage);
     }
+    
 
     /**
      * Sets the direction we're facing. The 'direction' parameter must

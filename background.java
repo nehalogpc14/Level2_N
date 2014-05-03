@@ -30,11 +30,11 @@ public class background extends base
             "  dd                dd  ",
             "        g      r        ",
             "      ddd  b  ddd       ",
-            "                        ",
-            "     q            s     ",
-            "    gr            rh    ",
-            "   ddd            ddd   ",
-            "  a                     ",
+            "                  s     ",
+            "     q            rh    ",
+            "    gr            ddd   ",
+            "   ddd                  ",
+            "  a                  d  ",
             "        g r   r  g      ",
             "fffffffffffffffffffffffff" };
     }

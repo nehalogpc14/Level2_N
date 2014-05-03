@@ -142,7 +142,7 @@ public class Avatar extends Actor
     
     public void moveRight()
     {
-        setLocation(getX()+ 10, getY());
+        setLocation(getX()+ 7, getY());
         if(animationCounter % 4 == 0)
         {
             animateRight();
@@ -174,7 +174,7 @@ public class Avatar extends Actor
 
     public void moveLeft()
     {
-        setLocation(getX()- 10, getY());
+        setLocation(getX()- 7, getY());
         if(animationCounter %4 == 0)
         {
             animateLeft();

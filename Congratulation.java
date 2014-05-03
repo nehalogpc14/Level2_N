@@ -16,17 +16,17 @@ public class Congratulation extends BlueDemon
     {
         // Add your action code here.
         GreenfootImage image = getImage(); 
-        image.scale(300,300);
-        setImage(image);
-        Greenfoot.delay(3);
         image.scale(400,400);
-        setImage(image);
-        Greenfoot.delay(3);
-        image.scale(500,500);
-        setImage(image);
-        image.scale(600,600);
-        setImage(image);
-        image.scale(700,700);
+        //setImage(image);
+      //  Greenfoot.delay(3);
+    //    image.scale(400,400);
+  //      setImage(image);
+//        Greenfoot.delay(3);
+//        image.scale(500,500);
+   //     setImage(image);
+ //       image.scale(600,600);
+//        setImage(image);
+//        image.scale(700,700);
         setImage(image);
         
         if (GameOver = true)

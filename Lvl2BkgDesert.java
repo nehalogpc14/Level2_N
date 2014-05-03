@@ -12,17 +12,24 @@ public class Lvl2BkgDesert extends World
 {
     public int AvailDarts = 100;
     
+    
     /**
      * Constructor for objects of class Lvl2BkgDesert.
      * 
      */
-    public Lvl2BkgDesert()
+    public Lvl2BkgDesert(int L1counter)
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(800, 600, 1); 
         Greenfoot.playSound("Lvl2Music.mp3");
          //Create the demon object
         BlueDemon bluedemon = new BlueDemon();
+        
+        AvailDarts = L1counter;
+        if (AvailDarts < 0)
+        {
+            AvailDarts = 0;
+        }
         
         // Put Blue Demon in our world
         addObject(bluedemon,50+Greenfoot.getRandomNumber(700), 30+getHeight()/4);

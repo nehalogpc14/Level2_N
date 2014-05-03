@@ -50,9 +50,8 @@ public class BlueDemon extends Actor
         {      
            Lvl2BkgDesert myWorld = (Lvl2BkgDesert)getWorld();
                int n = myWorld.GetAvailDarts();
-               System.out.println(n); 
                
-           if (n == 0) 
+           if (n <= 1) 
             {
                getWorld().addObject(new DemonExplosion(), getWorld().getWidth()/2, getWorld().getHeight()/2);
                GameOver = true;
@@ -69,9 +68,6 @@ public class BlueDemon extends Actor
                 image.scale(image.getWidth() - 8, image.getHeight() - 10);  
                 setImage(image);
                 Greenfoot.playSound("ping.wav");
-                
-        //        proton.play();            
-        //       setImage("GreenDemon.png");    
        
                d.setLocation(300,getWorld().getHeight()-20);
 

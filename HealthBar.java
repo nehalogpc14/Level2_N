@@ -17,7 +17,8 @@ public class HealthBar extends Actor
     long startTime;
     private int score;
     private int timeRem;
-    public int TimeLeft = 120;
+    //public int TimeLeft = 120;
+    public int TimeLeft = 10;
     int timer;
     /**
      * Act - do whatever the HealthBar wants to do. This method is called whenever

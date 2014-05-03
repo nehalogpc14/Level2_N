@@ -33,8 +33,8 @@ public class background1 extends base
             "                        ",
             "      rh                ",
             "     dddd         w     ",
-            "                dgggg   ",
-            "   a            ddddd k ",
+            "                dgggg k ",
+            "   a            ddddd d ",
             "       h r  g r g g g   ",
             "fffffffffffffffffffffffff" };
     }

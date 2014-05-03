@@ -22,6 +22,14 @@ public class Launcher extends Mover
         GreenfootImage img = getImage();
         setImage(img);
         
+        Lvl2BkgDesert myd = (Lvl2BkgDesert) getWorld();
+        if (myd.GetAvailDarts() <= 0)
+        {
+                boolean GameOver;
+               getWorld().addObject(new DemonExplosion(), getWorld().getWidth()/2, getWorld().getHeight()/2);
+               GameOver = true;
+               getWorld().removeObject(this);
+        }
         
         shootdelay++;
         //if(Greenfoot.isKeyDown( "up"))

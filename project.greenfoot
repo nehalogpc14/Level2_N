@@ -1,11 +1,11 @@
 #Greenfoot properties
-#Sat May 03 15:16:05 PDT 2014
+#Sat May 03 15:56:16 PDT 2014
 class.Mover.superclass=greenfoot.Actor
 target24.type=ClassTarget
 target16.name=Floor
 target13.editor.width=900
 class.Start.superclass=greenfoot.Actor
-class.Explosion.image=explosion.png
+class.Explosion.image=explosion (1).png
 dependency116.from=Start
 dependency85.to=Key
 dependency58.from=background1
@@ -743,7 +743,7 @@ target33.x=10
 dependency7.from=Avatar
 target1.editor.height=700
 dependency115.to=help
-class.DemonExplosion.image=DemonExplosion.png
+class.DemonExplosion.image=ewwdead.jpg
 target24.width=100
 dependency36.to=Door
 target6.showInterface=false
@@ -910,7 +910,7 @@ class.Next.superclass=greenfoot.Actor
 dependency9.from=background
 target1.y=910
 target1.x=10
-class.Congratulation.image=Congratulation.png
+class.Congratulation.image=Congrats.jpg
 dependency44.to=Goldcoin
 class.DemonExplosion.superclass=BlueDemon
 target32.editor.height=528

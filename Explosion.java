@@ -1,19 +1,47 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.util.*;
 /**
- * Write a description of class Explosion here.
+ * An Explosion. It starts by expanding and then collapsing
+ *
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
 public class Explosion extends Actor
 {
-    /**
-     * Act - do whatever the Explosion wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act() 
+    int sx = 20;
+    int sy = 20;
+    
+    public Explosion()
     {
-        // Add your action code here.
+        GreenfootImage img = new GreenfootImage("explosion.png");
+        img.scale(sx,sy);
+        setImage(img);
+    }
+    
+    
+    
+    
+    /**
+     * Explode!
+     */
+    int counter = 0;
+    public void act()
+    {
+        counter++;
+        if(counter > 50)
+        {
+            Actor Rock = getOneIntersectingObject(Rocks.class);
+            //System.out.println("removing Rocks Num:" + Rock.getNumber());
+            getWorld().removeObject(Rock);
+            getWorld().removeObject(this);
+        }
+        
+        //if((counter % 10) == 0)
+        {
+            GreenfootImage img = new GreenfootImage("explosion.png");            
+            img.scale(sx + counter*2,sy + counter*2);
+            setImage(img);        
+        }
     }    
 }

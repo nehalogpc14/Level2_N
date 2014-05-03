@@ -209,7 +209,7 @@ public class Avatar extends Actor
         {
             getCoin();
             counter.add(2);
-            Greenfoot.playSound("Coin.wav");
+            Greenfoot.playSound("ping.wav");
         }
     }
     public void getCoin()
@@ -243,7 +243,7 @@ public class Avatar extends Actor
             get(Key.class);
             haskey = true;
            // score = score + 10;
-            //Greenfoot.playSound("keyfound.wav");
+            Greenfoot.playSound("chime.wav");
         }
     }
 

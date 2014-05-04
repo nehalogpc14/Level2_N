@@ -20,21 +20,16 @@ public class DemonExplosion extends BlueDemon
         GreenfootImage image = getImage(); 
         image.scale(400,400);
         setImage(image);
-//         Greenfoot.delay(3);
-//         image.scale(400,400);
-//         setImage(image);
-//         Greenfoot.delay(3);
-//         image.scale(500,500);
-//         setImage(image);
-//         image.scale(600,600);
-//         setImage(image);
-//         image.scale(700,700);
-//        // setImage(image);
-        
-        if (GameOver = true)
-        {
+         if(Greenfoot.mouseClicked(this))  
+        {  
             Greenfoot.stop();
+            Startroom sr = new Startroom(); 
+            Greenfoot.setWorld(sr);
         }
+        //if (GameOver = true)
+        //{
+         //   Greenfoot.stop();
+       // }
        
     }    
 }

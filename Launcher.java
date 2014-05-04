@@ -32,24 +32,15 @@ public class Launcher extends Mover
         }
         
         shootdelay++;
-        //if(Greenfoot.isKeyDown( "up"))
-        //{
-        //     move(5);
-        //}
-       
-        //if(Greenfoot.isKeyDown( "down"))
-        //{
-        //     move(-5);
-        //}
         
         if (Greenfoot.isKeyDown("left"))
         {
-            turn(-4);
+            turn(-1);
         }
         
         if(Greenfoot.isKeyDown("right"))
         {
-            turn(4);
+            turn(1);
         }
         if(Greenfoot.isKeyDown("space"))
         {  

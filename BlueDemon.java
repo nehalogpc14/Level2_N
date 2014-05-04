@@ -1,5 +1,5 @@
  
-
+import java.util.*;
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.Random;
 
@@ -60,7 +60,14 @@ public class BlueDemon extends Actor
             
             //Remove Bullet and Demon objects;
 
-           Actor d = getOneObjectAtOffset(0, 0, Darts.class);
+           //Actor d = getOneObjectAtOffset(0, 0, Darts.class);
+         Actor d = null;
+         List<Actor> mylist = (List<Actor>) getObjectsInRange(20,Darts.class);       
+         
+         if ( ! mylist.isEmpty())
+          {
+             d = getOneIntersectingObject(Darts.class);        
+          }
     
            if (d != null)
            {

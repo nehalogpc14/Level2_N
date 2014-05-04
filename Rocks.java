@@ -47,10 +47,10 @@ public class Rocks extends Actor
         //Actor Darts = getOneObjectAtOffset(0, 0, Darts.class);     
         List<Actor> mylist = (List<Actor>) getObjectsInRange(30,Darts.class);
         //Actor Darts=getOneIntersectingObject(Darts.class);
-        if (mylist.isEmpty())
-      {
-           return;
-       }
+//         if (mylist.isEmpty())
+//       {
+//            return;
+//        }
         
        Actor Darts = getOneIntersectingObject(Darts.class);
         

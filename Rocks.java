@@ -47,38 +47,36 @@ public class Rocks extends Actor
         //Actor Darts = getOneObjectAtOffset(0, 0, Darts.class);     
         List<Actor> mylist = (List<Actor>) getObjectsInRange(30,Darts.class);
         //Actor Darts=getOneIntersectingObject(Darts.class);
-//         if (mylist.isEmpty())
-//       {
-//            return;
-//        }
-        
-       Actor Darts = getOneIntersectingObject(Darts.class);
-        
-        
-        if(Darts!=null)
+        if ( ! mylist.isEmpty())
         {
-            getWorld().removeObject(Darts);
-            if(colorchanged)
+            Actor Darts = getOneIntersectingObject(Darts.class);
+            if(Darts!=null)
             {
-                Greenfoot.playSound("OrangeCacti.wav");
-                shotstaken++;
-                myWorld.DecrememntDarts(1);
+                getWorld().removeObject(Darts);
+                if(colorchanged)
+                {
+                    Greenfoot.playSound("OrangeCacti.wav");
+                    shotstaken++;
+                    myWorld.DecrememntDarts(1);
+                }
+                else
+                {
+                    myWorld.DecrememntDarts(3);
+                    Greenfoot.playSound("greencactus.wav");                
+                }    
             }
-            else
+            
+            //Detects when explodes
+            if(shotstaken > 3)
             {
-                myWorld.DecrememntDarts(3);
-                Greenfoot.playSound("greencactus.wav");                
+                getWorld().addObject(new Explosion(), getX(), getY());
+                shotstaken = 0;
+                Greenfoot.playSound("explosion.wav");
+                myWorld.IncrementDarts(5);
             }
         }
-        //Detects when explodes
-        //Actor  = getOneIntersectingObject(.class);
-        if(shotstaken > 3)
-        {
-            getWorld().addObject(new Explosion(), getX(), getY());
-            shotstaken = 0;
-            Greenfoot.playSound("explosion.wav");
-        } 
-        //
+        
+        //change the color of the cacti
         if(!colorchanged)
         {
             if(count % randtime == 0)

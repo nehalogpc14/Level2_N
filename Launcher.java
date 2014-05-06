@@ -1,5 +1,3 @@
- 
-
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class Mover here.
@@ -25,7 +23,7 @@ public class Launcher extends Mover
         Lvl2BkgDesert myd = (Lvl2BkgDesert) getWorld();
         if (myd.GetAvailDarts() <= 0)
         {
-                boolean GameOver;
+               boolean GameOver;
                getWorld().addObject(new DemonExplosion(), getWorld().getWidth()/2, getWorld().getHeight()/2);
                GameOver = true;
                getWorld().removeObject(this);
@@ -35,12 +33,18 @@ public class Launcher extends Mover
         
         if (Greenfoot.isKeyDown("left"))
         {
-            turn(-1);
+            if (getRotation() <= 90 || getRotation() > 270)
+            {
+                turn(-2);
+            }
         }
-        
+     
         if(Greenfoot.isKeyDown("right"))
         {
-            turn(1);
+            if (getRotation() < 90 || getRotation() >= 270)
+            {
+                turn(2);
+            }
         }
         if(Greenfoot.isKeyDown("space"))
         {  
